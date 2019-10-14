@@ -1,0 +1,37 @@
+Install WDK10.
+
+Change registry to allow disable keyboard.
+---------kbd.reg
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters]
+"AllowDisable"=dword:00000001
+---------
+----------disable auto run
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer] "NoDriveTypeAutoRun"=dword:000000ff
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer] "NoDriveTypeAutoRun"=dword:000000ff
+----------------------
+
+Find mouse and keyboard use DevCon
+
+devcon listclass keyboard
+devcon listclass mouse
+
+For full list of device class
+https://msdn.microsoft.com/en-us/library/windows/hardware/ff553426(v=vs.85).aspx
+
+Enable/Disable a decive class
+
+devcon enable =Mouse
+devcon disable =Mouse
+
+devcon disable USBSTOR\*
+devcon enable USBSTOR\*
+devcon find USBSTOR\*
+
+Get status of device=======
+devcon status =Mouse
+
+YOU WILL NEED ADMINISTRATOR TO RUN DevCon!!!

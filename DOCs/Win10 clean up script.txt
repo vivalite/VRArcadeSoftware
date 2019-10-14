@@ -1,0 +1,17 @@
+Execute below in powershell
+
+
+Get-AppxPackage | Sort-Object -Property Name | Select-Object -Property Name
+
+
+'Microsoft.BingSports', 'Microsoft.MicrosoftSolitaireCollection',
+'Microsoft.People', 'Microsoft.Windows.Photos', 'Microsoft.WindowsCamera',
+'microsoft.windowscommunicationsapps', 'Microsoft.WindowsPhone',
+'Microsoft.WindowsSoundRecorder', 'Microsoft.XboxApp', 'Microsoft.ZuneMusic',
+'Microsoft.ZuneVideo', 'Microsoft.WindowsCalculator', 'Microsoft.3DBuilder',
+'Microsoft.Office.OneNote', 'Microsoft.WindowsMaps', 'Microsoft.XboxApp',
+'Microsoft.XboxGameCallableUI', 'Microsoft.XboxIdentityProvider'|
+ForEach-Object {
+    Get-AppxPackage -Name $_ |
+    Remove-AppxPackage
+}

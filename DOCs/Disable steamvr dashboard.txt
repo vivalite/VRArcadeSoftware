@@ -1,0 +1,8 @@
+-nosteamvr -nodashboard
+
+C:\Program Files (x86)\Steam\config\steamvr.vrsettings
+"steamvr" : {
+"sendSystemButtonToAllApps" : true
+}
+
+

@@ -1,0 +1,18 @@
+Server End
+==========
+Server  (Listen Port: 20017, 20018, 20019)
+   |
+   ----> Dashboard 20017
+   |
+   ----> Client daemon 20018
+   |
+   ----> Managing System 20019
+
+Client End
+==========
+Monitor App    (Listen Port:20015, 20016)
+   |
+   ---->Unity UI 20015
+   |
+   ---->Dashboard 20016
+

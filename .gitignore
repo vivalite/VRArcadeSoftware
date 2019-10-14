@@ -8,6 +8,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.licx
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -328,3 +329,10 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+Client
+ManagingSystem
+Server
+ILMaps
+/NSISFinalInstallPackage/Client/VRGameStationClientInstaller.exe
+/NSISFinalInstallPackage/ManagingSystem/VRManagingClientInstaller.exe
+/NSISFinalInstallPackage/Server/VRArcadeServerInstaller.exe
