@@ -329,10 +329,10 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-Client
-ManagingSystem
-Server
-ILMaps
+BuildTemp/Client
+BuildTemp/ManagingSystem
+BuildTemp/Server
+BuildTemp/ILMaps
 /NSISFinalInstallPackage/Client/VRGameStationClientInstaller.exe
 /NSISFinalInstallPackage/ManagingSystem/VRManagingClientInstaller.exe
 /NSISFinalInstallPackage/Server/VRArcadeServerInstaller.exe

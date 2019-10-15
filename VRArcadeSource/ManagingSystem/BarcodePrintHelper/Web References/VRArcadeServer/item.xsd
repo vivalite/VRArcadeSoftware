@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VRArcadeServer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VRArcadeServer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:20017/VRArcadeDashboardService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/VRGameSelectorServerDTO" />
+  <xs:complexType name="DashboardModuleInfo">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VRGameSelectorServerDTO" minOccurs="0" name="CurrentRunningMode" type="q1:Enums.ClientRunningMode" />
+      <xs:element minOccurs="0" name="CurrentRunningTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequireAssistant" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VRGameSelectorServerDTO" minOccurs="0" name="LiveClientStatus" type="q2:Enums.LiveClientStatus" />
+      <xs:element minOccurs="0" name="TimeStamp" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DashboardModuleInfo" nillable="true" type="tns:DashboardModuleInfo" />
+</xs:schema>
