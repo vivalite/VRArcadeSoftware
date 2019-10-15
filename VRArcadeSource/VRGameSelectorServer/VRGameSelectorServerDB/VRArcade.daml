@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataaccess-mapping context-namespace="VRGameSelectorServerDB" namespace="VRGameSelectorServerDB" p1:name="VRArcadeDataAccessModel" p1:Guid="ffbcacf2-c188-476b-8e85-6524529a4045" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="VRClienthistory" entity-set="VRClienthistories" table="" concurrency-mode="Changed" p1:Guid="9dc385d2-4404-4d71-9ae7-75f6804490e2">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="09878f5d-2dfb-4d30-972a-5f21d83053c3">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="StartTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2aba13ba-ba6c-43ec-b160-f6765d20b27a">
+      <column name="" not-null="False" p1:unicode="False" />
+    </property>
+    <property name="EndTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="dee7da3f-06c7-4d3b-843c-27444b82bd3f">
+      <column name="" not-null="False" p1:unicode="False" />
+    </property>
+    <property name="TileConfigID" type="Int32" p1:ValidateRequired="true" p1:Guid="f6177cfc-e5ea-4377-8c49-9f2954940025">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="VRClientID" type="Int32" p1:ValidateRequired="true" p1:Guid="aa2650b6-d703-41cb-8738-a6ab3c9034ea">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="VRClient" entity-set="VRClients" table="" concurrency-mode="Changed" p1:Guid="922c20b8-3290-43d0-ad2a-bfad2d5b45e8">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="cfe7a2bd-eacf-4608-8309-c7915e4fa024">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="MachineName" type="Varchar" p1:ValidateRequired="true" p1:Guid="29d37ded-a472-4470-8120-3b9e89764618">
+      <column name="" not-null="True" length="255" p1:unicode="True" />
+    </property>
+    <property name="IPAddress" type="Varchar" p1:ValidateRequired="true" p1:Guid="375ac9d2-a5d5-4fb5-b09a-6a8d3f6229a2">
+      <column name="" not-null="True" length="255" p1:unicode="True" />
+    </property>
+    <property name="DashboardModuleIP" type="Varchar" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e2e80979-9d24-4ac0-95cc-e65db74e5d31">
+      <column name="" />
+    </property>
+    <property name="TileConfigSetID" type="Int32" p1:ValidateRequired="true" p1:Guid="1ca61e66-e507-48c0-8c97-01af8d96d868">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="IsDeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="baf73394-a153-405d-bb35-cc0e09a64c36">
+      <column name="" />
+    </property>
+  </class>
+  <class name="VRConfiguration" entity-set="VRConfigurations" table="" concurrency-mode="Changed" p1:Guid="1b42735e-82b9-495a-8edc-ffa999dbcee0">
+    <id name="Type" type="Varchar" p1:ValidateRequired="true" p1:Guid="f1e0ba09-ff93-4a8c-93d3-6b58250be1ae">
+      <column name="" not-null="True" length="255" p1:unicode="True" />
+    </id>
+    <property name="Value" type="Clob" p1:ValidateRequired="true" p1:Guid="07cf7a65-f464-443b-a933-fbffc82842c4">
+      <column name="" not-null="True" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="VRTileconfig" entity-set="VRTileconfigs" table="" concurrency-mode="Changed" p1:Guid="45bf7e3a-ac63-4959-9429-5c8af1614829">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="13071509-aec9-4ac5-9c63-2525960eb135">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="TileGUID" type="Varchar" p1:ValidateRequired="true" p1:Guid="03758ca2-ebaa-4b54-8c17-f23bbe4b94bd">
+      <column name="" not-null="True" length="255" p1:unicode="True" />
+    </property>
+    <property name="TileTitle" type="Clob" p1:ValidateRequired="true" p1:Guid="44afa538-bd46-4a50-862e-92ff7e0fd647">
+      <column name="" not-null="True" p1:unicode="True" />
+    </property>
+    <property name="TileHeight" type="Int32" p1:ValidateRequired="true" p1:Guid="58032a99-ccb5-44c3-87c7-d2d07c5b5430">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="TileWidth" type="Int32" p1:ValidateRequired="true" p1:Guid="7b627636-6b91-4600-906f-3e6542bfc0b8">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="AgeRequire" type="Int32" p1:ValidateRequired="true" p1:Guid="cc39c288-de84-4c18-9961-70d36bdf8bfe">
+      <column name="" default="0" />
+    </property>
+    <property name="ImageData" type="Blob" p1:ValidateRequired="true" p1:Guid="4722bb0e-e181-4924-9e74-96a92697537a">
+      <column name="" not-null="True" p1:unicode="True" />
+    </property>
+    <property name="TileDesc" type="Clob" p1:ValidateRequired="true" p1:Guid="1066c7fb-fa43-4892-81ec-03185ea93335">
+      <column name="" not-null="True" p1:unicode="True" />
+    </property>
+    <property name="Command" type="Clob" p1:ValidateRequired="true" p1:Guid="4fbd49a9-05bc-48c5-8f65-efa5bda44d63">
+      <column name="" not-null="True" p1:unicode="True" />
+    </property>
+    <property name="Arguments" type="Clob" p1:ValidateRequired="true" p1:Guid="fe19e5f4-45f7-4242-9831-4c7832050547">
+      <column name="" not-null="True" p1:unicode="True" />
+    </property>
+    <property name="WorkingPath" type="Clob" p1:ValidateRequired="true" p1:Guid="02d50ab1-4331-47de-9acf-24fff755b7a3">
+      <column name="" not-null="True" p1:unicode="True" />
+    </property>
+    <property name="VideoURL" type="Clob" p1:ValidateRequired="true" p1:Guid="99bce253-9351-4d8e-945f-d560fc83a24e">
+      <column name="" />
+    </property>
+    <property name="Order" type="Int32" p1:ValidateRequired="true" p1:Guid="3bcc6cec-1579-4b81-ac02-c4e288a5ebe7">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="TileRowNumber" type="Int32" p1:ValidateRequired="true" p1:Guid="88a36c15-4837-49a7-8c41-f59adb9f4526">
+      <column name="" />
+    </property>
+    <property name="TileConfigSetID" type="Int32" p1:ValidateRequired="true" p1:Guid="1d4f1de8-7bc3-4106-b997-c1da865b5565">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="VRTileconfigID" type="Int32" p1:ValidateRequired="true" p1:Guid="42cf1271-54df-4a38-88e3-6eb195ce1349">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="IsDeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="ec16faf8-f18e-480f-8d10-8768e8cc53d6">
+      <column name="" />
+    </property>
+  </class>
+  <class name="VRTileconfigset" entity-set="VRTileconfigsets" table="" concurrency-mode="Changed" p1:Guid="6a100996-b982-4efa-8cd9-de462737aee5">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="e6656569-7da2-486f-9a58-fee4cea42654">
+      <column name="" not-null="True" precision="11" scale="0" p1:unicode="False" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="Name" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0a2f0e94-5c47-4e62-9877-2cb2bd7982ab">
+      <column name="" not-null="False" p1:unicode="True" />
+    </property>
+    <property name="IsDeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="144934a4-99b1-452f-956e-aadca412f13a">
+      <column name="" />
+    </property>
+  </class>
+  <class name="VRTicket" entity-set="VRTickets" table="" p1:Guid="ee4b54d4-1e43-4e7b-a901-b38a2a96a722">
+    <id name="GUID" type="Varchar" p1:ValidateRequired="true" p1:Guid="2e3d5f71-e8bd-45e4-91d1-3db9111a9602">
+      <column name="" not-null="True" length="36" p1:fixed-length="True" p1:unicode="True" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="TimeStampCreate" type="DateTime" p1:ValidateRequired="true" p1:Guid="a9e4787d-d21a-478f-84fb-32a3fd5b4d94">
+      <column name="" />
+    </property>
+    <property name="TimeStampDelete" type="DateTime" p1:ValidateRequired="true" p1:Guid="7dc0428d-affb-472d-8a94-71bdf1930ffc">
+      <column name="" />
+    </property>
+    <property name="Minutes" type="Int32" p1:ValidateRequired="true" p1:Guid="dbe02a35-6c05-46fb-8641-9500355085a2">
+      <column name="" default="0" not-null="True" />
+    </property>
+    <property name="VRTicketTypeID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="67c2b4a7-5740-4165-9c4e-274277618a64">
+      <column name="" />
+    </property>
+    <property name="VRClientID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9a1151fd-25aa-4ea5-a76a-055397aeb2b3">
+      <column name="" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="IsDeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="bdb7a31d-2c28-40f5-9620-b5e7cb2ba26d">
+      <column name="" />
+    </property>
+    <property name="WaiverLogID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="26492c61-9b6b-4cb1-9e5e-4d61d2861ca8">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="VRTicketType" entity-set="VRTicketTypes" table="" p1:Guid="5e0d6656-db1a-4782-9fa3-76220d84fc5f">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="d2d1b673-f983-4f45-aee4-7c4767344353">
+      <column name="" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="Type" type="Varchar" p1:ValidateRequired="true" p1:Guid="13988c6f-a935-48a1-8461-ce29ab0c4525">
+      <column name="" />
+    </property>
+  </class>
+  <class name="VRManageLog" entity-set="VRManageLogs" table="" p1:Guid="6456943c-d40c-4228-b0ee-2513c0bac9b5">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="9c3f52e9-3670-4060-b0fd-eca216c2d65d">
+      <column name="" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="Operation" type="Varchar" p1:ValidateRequired="true" p1:Guid="8dfa1f91-9150-4acf-ae92-0234afc09604">
+      <column name="" length="255" />
+    </property>
+    <property name="AdditonalInfo" type="Varchar" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="26b989fc-25b8-449b-94d1-15032da8207d">
+      <column name="" length="255" />
+    </property>
+    <property name="Source" type="Varchar" p1:ValidateRequired="true" p1:Guid="337310ba-0f8a-4048-b214-134e35ea9cb0">
+      <column name="" length="255" />
+    </property>
+    <property name="SourceIdentity" type="Varchar" p1:ValidateRequired="true" p1:Guid="376d1fb7-1336-4b6e-af63-f56d6e485b13">
+      <column name="" length="255" />
+    </property>
+    <property name="TimeStamp" type="DateTime" p1:ValidateRequired="true" p1:Guid="a3645d82-0b29-4949-ad9d-0bb2b1a40f8b">
+      <column name="" />
+    </property>
+    <property name="VRClientID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e6804406-bd90-42a7-9b19-3ee1e44d60c4">
+      <column name="" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="VRTileconfigID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f518ca98-8c51-42aa-8eee-50218e8065f4">
+      <column name="" precision="11" scale="0" p1:unicode="False" />
+    </property>
+    <property name="VRTicketGUID" type="Varchar" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="051aeafd-7530-4009-a47f-b557b8efdbc7">
+      <column name="" length="36" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="VRWaiverLog" entity-set="VRWaiverLogs" table="" p1:Guid="9fb05ae1-ef88-41d9-ace3-b2eef0839dab">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="16778e99-7a3f-49d4-a78b-5abad85a1832">
+      <column name="" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="IsNewEntry" type="Boolean" p1:ValidateRequired="true" p1:Guid="59c73106-14b1-4849-81be-7ab05e4c66e5">
+      <column name="" default="True" not-null="True" />
+    </property>
+    <property name="FirstName" type="UnicodeStringVariableLength" p1:ValidateRequired="true" p1:Guid="b7071ded-0e81-4130-8b78-0c6d21578ca3">
+      <column name="" />
+    </property>
+    <property name="LastName" type="UnicodeStringVariableLength" p1:ValidateRequired="true" p1:Guid="678bcee5-4dd8-41b3-a972-9d8be23031d2">
+      <column name="" />
+    </property>
+    <property name="Address" type="UnicodeStringVariableLength" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2641a1a4-25e2-438d-bf02-e0635b4d119f">
+      <column name="" />
+    </property>
+    <property name="City" type="UnicodeStringVariableLength" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bcb8336c-a79e-4255-b0a9-d31ecff0f47b">
+      <column name="" />
+    </property>
+    <property name="Province" type="Varchar" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5847f65e-7d50-4a02-a680-d25e4fb4e1cd">
+      <column name="" />
+    </property>
+    <property name="Postcode" type="UnicodeStringVariableLength" p1:ValidateRequired="true" p1:Guid="3c22727f-1b58-4df2-b6c3-e0b317b5aabb">
+      <column name="" />
+    </property>
+    <property name="Cell" type="UnicodeStringVariableLength" p1:ValidateRequired="true" p1:Guid="2508474e-5fe4-4102-8ce3-135b9c3f7b66">
+      <column name="" />
+    </property>
+    <property name="DOB" type="DateTime" p1:ValidateRequired="true" p1:Guid="dc4bb14b-663b-4b7a-b1c3-d61616f20239">
+      <column name="" />
+    </property>
+    <property name="Email" type="StringVariableLength" p1:ValidateRequired="true" p1:Guid="555a1d9b-ea09-423f-b261-e920d6717d88">
+      <column name="" />
+    </property>
+    <property name="SignFileName" type="Varchar" p1:ValidateRequired="true" p1:Guid="8ebde558-cd9a-46c7-8f26-4bd00987a780">
+      <column name="" />
+    </property>
+    <property name="TimeStampCreate" type="DateTime" p1:ValidateRequired="true" p1:Guid="2191af2a-c49d-46b8-85e3-745504766351">
+      <column name="" />
+    </property>
+    <property name="IsDeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="eed68a53-56f2-4b75-90bd-5de6dc2a90fd">
+      <column name="" />
+    </property>
+    <property name="BookingReferenceID" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a548a8f6-836b-44d8-8475-d1740668d46c">
+      <column name="" />
+    </property>
+  </class>
+  <class name="VRBookingReference" entity-set="VRBookingReferences" table="" cascade-delete="False" p1:Guid="25dd2d9e-a017-414d-9c6f-7fd0ee047018">
+    <id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="72636e4f-48f0-4c2a-aa69-65dabcd7bda2">
+      <column name="" />
+    </id>
+    <generator class="Autoinc" />
+    <property name="Reference" type="Varchar" p1:ValidateRequired="true" p1:Guid="97b3df2f-d205-4a66-a633-af9206d70c7c">
+      <column name="" />
+    </property>
+    <property name="IsNonTimedTiming" type="Boolean" p1:ValidateRequired="true" p1:Guid="64c6f5fb-5f07-4ae0-a8dc-93cfd86ebf1c">
+      <column name="" />
+    </property>
+    <property name="IsTimedTiming" type="Boolean" p1:ValidateRequired="true" p1:Guid="e1f9498d-cb9b-4d04-9a30-745ac9c6aac2">
+      <column name="" />
+    </property>
+    <property name="Duration" type="Int32" p1:ValidateRequired="true" p1:Guid="da9d656f-b4c2-418d-a151-60b583acc16a">
+      <column name="" />
+    </property>
+    <property name="NumberOfBookingTotal" type="Int32" p1:ValidateRequired="true" p1:Guid="b8cb7f97-e88e-4be1-af0c-60732f5d4daf">
+      <column name="" />
+    </property>
+    <property name="NumberOfBookingLeft" type="Int32" p1:ValidateRequired="true" p1:Guid="b1d52118-beea-45a8-95f6-0501867b7708">
+      <column name="" />
+    </property>
+    <property name="TimeStampCreate" type="DateTime" p1:ValidateRequired="true" p1:Guid="efe0548c-a1b4-43af-9e3e-23643a4b07c7">
+      <column name="" />
+    </property>
+    <property name="BookingChanged" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ce3bcff1-a718-4e42-82eb-bd02f8dda20e">
+      <column name="" />
+    </property>
+    <property name="BookingDeleted" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="38b7b1e1-5d8b-449b-81ed-ef1a55651d81">
+      <column name="" />
+    </property>
+    <property name="BookingStartTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="706b3f92-ed63-4ce7-abbd-5bee01b9bbde">
+      <column name="" />
+    </property>
+    <property name="BookingEndTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d8c4db90-a42b-4a8e-91dd-544fbd05b52e">
+      <column name="" />
+    </property>
+  </class>
+  <associations>
+    <association name="Tileconfig_Clienthistory" cardinality="OneToMany" p1:Guid="9d73c936-e396-4a80-b004-ad26960d4ddd">
+      <end1 multiplicity="One" name="Tileconfig" class="VRClienthistory" relation-class="VRTileconfig" constrained="False" p1:Guid="22ad2910-6a4f-40c3-beaa-7b02dd061d3d">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="Clienthistories" class="VRTileconfig" relation-class="VRClienthistory" p1:Guid="ef18e641-ad77-4172-9d82-f638b00b0144">
+        <property name="TileConfigID" />
+      </end2>
+    </association>
+    <association name="Tileconfigset_Client" cardinality="OneToMany" p1:Guid="14b48c04-520c-420b-998f-1b26251ba72c">
+      <end1 multiplicity="One" name="Tileconfigset" class="VRClient" relation-class="VRTileconfigset" constrained="False" p1:Guid="d82af24c-0520-4b19-964b-2ac68e99ae0c">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="Clients" class="VRTileconfigset" relation-class="VRClient" p1:Guid="e8733729-c771-45de-97d9-3b193ce04cfe">
+        <property name="TileConfigSetID" />
+      </end2>
+    </association>
+    <association name="Tileconfigset_Tileconfig" cardinality="OneToMany" p1:Guid="e154cab0-e2f9-4666-87ee-d5ff944cd4a3">
+      <end1 multiplicity="One" name="Tileconfigset" class="VRTileconfig" relation-class="VRTileconfigset" constrained="False" p1:Guid="488fae17-e824-496c-8781-e612e46bc18b">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="Tileconfigs" class="VRTileconfigset" relation-class="VRTileconfig" p1:Guid="b9124aa1-123a-4831-b004-c72e93e7b8e6">
+        <property name="TileConfigSetID" />
+      </end2>
+    </association>
+    <association name="VRClient_VRClienthistory" cardinality="OneToMany" p1:Guid="97cd048f-b4c1-4d2e-a31b-0b9bb3b99e8d">
+      <end1 multiplicity="One" name="VRClient" class="VRClienthistory" relation-class="VRClient" constrained="False" p1:Guid="b7953bd7-3a74-4431-a273-c2dbd0626640">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRClienthistories" class="VRClient" relation-class="VRClienthistory" p1:Guid="dabc98a7-a539-4ce5-8126-afcde6f0897b">
+        <property name="VRClientID" />
+      </end2>
+    </association>
+    <association name="VRTileconfig_VRTileconfig" cardinality="OneToMany" p1:Guid="130c9847-5c00-42ca-acc3-9c22ae686ee4">
+      <end1 multiplicity="One" name="VRTileconfig1" class="VRTileconfig" relation-class="VRTileconfig" constrained="False" p1:Guid="0ae3a14b-0cad-48d7-8294-146c1c61aeb0">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRTileconfigs" class="VRTileconfig" relation-class="VRTileconfig" p1:Guid="f4fc4fb1-cba5-4bc4-bd1e-7579af764443">
+        <property name="VRTileconfigID" />
+      </end2>
+    </association>
+    <association name="VRTicketType_VRTicket" cardinality="OneToMany" p1:Guid="b010f4bf-acff-46b0-8caa-3d2dbaffbd09">
+      <end1 multiplicity="ZeroOrOne" name="VRTicketType" class="VRTicket" relation-class="VRTicketType" constrained="True" p1:Guid="7aa522ba-8f54-4da6-9810-da0d76eb60e7">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRTickets" class="VRTicketType" relation-class="VRTicket" p1:Guid="daab527b-77d0-47ef-a90c-3ca62a6222ad">
+        <property name="VRTicketTypeID" />
+      </end2>
+    </association>
+    <association name="VRClient_VRTicket" cardinality="OneToMany" p1:Guid="2508de55-18af-443c-b55f-19b822fb495c">
+      <end1 multiplicity="ZeroOrOne" name="VRClient" class="VRTicket" relation-class="VRClient" constrained="True" p1:Guid="a555a47c-77c1-4750-9af8-b88af4943256">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRTickets" class="VRClient" relation-class="VRTicket" p1:Guid="8901d3a9-683b-4226-8685-1c7b274339f1">
+        <property name="VRClientID" />
+      </end2>
+    </association>
+    <association name="VRClient_VRManageLog" cardinality="OneToMany" p1:Guid="67de653b-1979-432f-980c-a354de04d599">
+      <end1 multiplicity="ZeroOrOne" name="VRClient" class="VRManageLog" relation-class="VRClient" constrained="True" p1:Guid="36767d56-0a02-4083-ae12-db0b0a18bb80">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRManageLogs" class="VRClient" relation-class="VRManageLog" p1:Guid="097fb389-2297-4400-a43e-f414d4216d0f">
+        <property name="VRClientID" />
+      </end2>
+    </association>
+    <association name="VRTileconfig_VRManageLog" cardinality="OneToMany" p1:Guid="9cc00291-3b0b-4048-96e3-4d9cae3e7825">
+      <end1 multiplicity="ZeroOrOne" name="VRTileconfig" class="VRManageLog" relation-class="VRTileconfig" constrained="True" p1:Guid="ef0ba320-2c49-4f46-8296-39d29d099712">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRManageLogs" class="VRTileconfig" relation-class="VRManageLog" p1:Guid="6b1bac84-c755-47f0-9b4e-831df417eded">
+        <property name="VRTileconfigID" />
+      </end2>
+    </association>
+    <association name="VRTicket_VRManageLog" cardinality="OneToMany" p1:Guid="9b6ef7f7-528e-47a5-83c9-07d0acfa2beb">
+      <end1 multiplicity="ZeroOrOne" name="VRTicket" class="VRManageLog" relation-class="VRTicket" constrained="False" p1:Guid="60e50c93-e865-4953-ab5d-43821d2418a2">
+        <property name="GUID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRManageLogs" class="VRTicket" relation-class="VRManageLog" p1:Guid="f2c83164-2312-4290-b47f-6ffefebad984">
+        <property name="VRTicketGUID" />
+      </end2>
+    </association>
+    <association name="WaiverLog_VRTicket" cardinality="OneToMany" p1:Guid="1da5ed4b-b62b-4426-9a1f-fc9ed2bb4b7b">
+      <end1 multiplicity="ZeroOrOne" name="WaiverLog" class="VRTicket" relation-class="VRWaiverLog" constrained="True" p1:Guid="30a07dcb-576f-43d6-8d36-97ee042d9886">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="VRTickets" class="VRWaiverLog" relation-class="VRTicket" p1:Guid="1832ab86-2337-4b77-a823-45d14dc90236">
+        <property name="WaiverLogID" />
+      </end2>
+    </association>
+    <association name="BookingReference_WaiverLog" cardinality="OneToMany" p1:Guid="9c2dcb9d-2311-43c9-beec-458d9d2c52de">
+      <end1 multiplicity="ZeroOrOne" name="BookingReference" class="VRWaiverLog" relation-class="VRBookingReference" constrained="True" p1:Guid="b197c920-3725-4fa3-8e47-b971f9f31d66">
+        <property name="ID" />
+      </end1>
+      <end2 multiplicity="Many" name="WaiverLogs" class="VRBookingReference" relation-class="VRWaiverLog" p1:Guid="a9f0b4c2-c193-4eb4-92fd-b8edada84003">
+        <property name="BookingReferenceID" />
+      </end2>
+    </association>
+  </associations>
+</dataaccess-mapping>

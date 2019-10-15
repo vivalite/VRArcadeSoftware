@@ -1,0 +1,17 @@
+barcode problem: Need to install microsoft point of service 1.12, 
+
+
+/etc/lightdm/lightdm.conf
+[SeatDefaults]
+xserver-command=X -nocursor -s 0 dpms
+
+/home/pi/.config/lxsession/LXDE-pi/autostart
+@/boot/VRArcade/RunDashboard
+
+reverse mini-uart on pi3 or problem with uart
+
+
+run command on remote
+
+export DISPLAY=:0
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<System>
+	<ServerIPPort>192.168.1.115:20017</ServerIPPort>
+	<UpdateServer>192.168.1.200</UpdateServer>
+	<FullScreen>True</FullScreen>
+	<Volume>75</Volume>
+</System>

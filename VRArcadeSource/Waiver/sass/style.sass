@@ -1,0 +1,461 @@
+// IMPORTS //
+@import "compass"
+@import "compass/css3/user-interface"
+@import "partials/defaults"
+@import "partials/fonts"
+
+// VARIABLES //
+$grid: 34px
+$brand: #0066AE
+
+$red: #FF2D00
+$orange: #FF5F3C
+$yellow: #FFB90D
+$green: #64D23E
+$purple: #9B0DFF
+
+// ANIMATIONS //
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+.fadein 
+	@include transition(all .15s)
+
+.nofade
+	@include transition(none)
+
++keyframes(blink)
+	to 
+		visibility: hidden
+
+.blink
+	+experimental(animation, blink 1s steps(5, start) infinite)
+
+// LANDSCAPE IPAD //
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+/* Styles */
+
+// LAYOUT //
+
+.error
+	background-color: #FF0000
+
+html, body
+	height: 100%
+	font-size: 16px
+	line-height: $grid
+	margin: 0
+	padding: 0
+
+::selection
+	background: transparent
+
+h1, h2, h3, h4, h5, h6
+	margin: $grid/2 0
+
+ol
+	margin: 0 $grid
+
+	li
+		font-size: $grid/2
+		line-height: 20px
+		margin: $grid/1.25 0
+
+button
+	@extend .fadein
+	border: none
+	border-radius: 3px
+	font-weight: 700
+
+	&:hover
+		cursor: pointer
+
+	&.add
+		background: #41b971
+		color: #FFF
+		font-size: $grid/1.5
+		height: 55px
+		padding: 0 $grid
+		width: 100%
+
+		i 
+			font-size: $grid*1.5
+			vertical-align: -5px
+
+		&:hover
+			background: darken(#41b971, 10)
+		
+ 
+body
+	padding: 0 $grid*2
+
+	&.waiver
+		*:not(i)
+			font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif
+
+	&.starter
+		background: $brand
+		line-height: $grid*3
+		padding: 0
+
+		nav
+			ul 
+				list-style: none
+				
+				a
+					display: block
+
+				li 
+					color: #FFF
+					font-family: "Helvetica Neue Ultra Light", "HelveticaNeue-UltraLight", "HelveticaNeue", Helvetica, sans-serif
+					font-size: $grid*3
+					font-weight: 200
+
+					border-bottom: 1px solid rgba(255,255,255,.06)
+					height: 224px
+					padding: $grid*1.75 0 $grid*1.75 $grid*2
+
+					i 
+						font-size: $grid*5
+						margin-right: $grid
+						vertical-align: top
+
+					span 
+						@extend .blink
+
+header
+	border-bottom: 2px solid $brand
+	overflow: hidden
+	padding: $grid 0 $grid/1.5
+
+	hgroup
+		@extend .left
+		width: 100%
+
+		h1, h3
+			margin: 0
+
+		h3
+			font-weight: 200
+
+	.right
+		margin-top: 9px
+		width: 0%
+
+		.warning // Top Warning
+
+			h2
+				margin: 0
+
+				&:first-of-type
+					font-size: 21px
+
+				&:nth-of-type(2)
+					font-size: 15px
+					line-height: 17px
+					margin: -3px 0 0 69px
+
+			i 
+				color: $yellow
+				float: left
+				font-size: $grid*3
+				margin: 11px $grid/4 0 0
+
+label
+	display: block
+	font-weight: 600
+	overflow: hidden
+	width: 100%
+	
+section, div
+	&.age
+
+		button
+			color: #FFF
+			font-size: $grid*2
+			height: $grid*5
+			margin: $grid/4 0
+			width: 100%
+
+			&.adult
+				background: $brand
+			&.guardian
+				background: darken($brand, 13)
+
+	&.one 
+		.warning
+			border-left: 2px solid $yellow
+			margin: $grid/2 0
+			padding: $grid/4 $grid/2
+
+			h2
+				color: #777
+				margin: 0
+
+				&:first-of-type
+					font-size: 21px
+
+				&:nth-of-type(2)
+					font-size: 15px
+					line-height: 17px
+					//margin: -3px 0 0 69px
+
+			i 
+				color: $yellow
+				float: left
+				font-size: $grid*3
+				margin: 11px $grid/4 0 0
+
+		input[type="text"] // Blue Underline Style
+			border: none
+			border-radius: 0px
+			box-shadow: inset 0 -2px 0 0 $brand
+			font-size: $grid/2
+			font-weight: bold
+			height: 30px
+			padding: 0
+			text-align: center
+			-webkit-appearance: none
+
+			&::-webkit-input-placeholder
+				font-weight: normal
+
+			&:focus
+				box-shadow: inset 0 -2px 0 0 $yellow
+				outline: 0
+
+	&.details
+		font-size: $grid/2
+		padding-top: $grid/2
+
+		table
+			border-spacing: 10px 0
+
+			tr
+				height: $grid*2.5
+
+		input, select
+			font-size: $grid/1.5
+			width: 100%
+
+	&.waiver
+		&.one, &.two
+			padding-top: $grid
+
+		ol
+			&[start="3"], &[start="6"]
+				li:first-of-type
+					margin-top: 10px
+
+	&.confirmation
+		.checkbox
+			@extend .left
+			width: 28px
+			height: 28px
+			background-color: #0963ae
+			border-radius: 2px
+			margin: 3px auto
+			position: relative
+			// -webkit-transform: scale(2)
+			// transform: scale(2)
+			zoom: 200%
+
+			input[type="checkbox"]
+				@include user-select(none)
+				border: none
+				-webkit-appearance: none
+
+			label
+				-webkit-appearance: none
+				border-radius: 1px
+				border: none
+				cursor: pointer
+				position: absolute
+				width: 24px
+				height: 24px
+				left: 2px
+				top: 2px
+				background-color: #FFF
+
+				&:after // check
+					@include rotate(-45deg)
+					opacity: 0
+					outline: 0
+					content: ''
+					position: absolute
+					width: 9px
+					height: 5px
+					background: rgba(255,255,255,0)
+					top: 6px
+					left: 6px
+					border: 3px solid #0963ae
+					border-top: none
+					border-right: none
+
+		.checkbox input[type=checkbox]:checked + label:after
+			opacity: 1
+
+		.highlight
+			@extend .right
+			width: -webkit-calc(100% - #{$grid} * 2)
+
+input:not([type="checkbox"]) // Gray Border Style
+	border: 2px solid #DDD
+	border-radius: 4px
+	font-size: $grid/2
+	font-weight: bold
+	height: 55px
+	padding: 7px
+	text-align: center
+	-webkit-appearance: none
+
+	&::-webkit-input-placeholder
+		color: #DDD
+		font-weight: normal
+
+	&:focus
+		border: 2px solid $yellow
+		outline: 0
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button#spin
+	display: none
+
+input[type="checkbox"]
+	-webkit-appearance: none
+
+
+	
+.highlight
+	font-size: $grid/2
+	font-weight: 600
+	line-height: $grid/1.25
+	margin: 0
+
+
+
+// SIGNATURE PAD OVERRIDES //
+
+.m-signature-pad
+	position: absolute
+	height: 250px
+	width: 100%
+
+.m-signature-pad--body
+	height: 80%
+	width: 100%
+
+	canvas
+		@include user-select(none)
+		left: 0
+		top: 0
+		height: 100%
+		width: 100%
+		position: absolute
+		z-index: 10
+
+.m-signature-pad--footer
+	bottom: 0
+	width: 100%
+	position: absolute
+
+	.description
+		border-top: 1px solid #f4f4f4
+		color: #666
+		font-size: 1.1em
+		font-weight: bold
+		text-align: center
+
+	button
+		background: $brand
+		color: #FFF
+		position: relative
+		top: 10px
+		z-index: 20
+		font-size: 20px
+		font-weight: 0
+		height: 55px
+		padding: $grid/4 $grid
+
+		&.clear
+			left: 0
+			padding: 10px
+			margin: 0 0 0 10px
+		
+		&.save
+			padding: 10px
+			float: right
+			margin: 0 10px 0 0
+
+
+// CAROUSEL OVERRIDES //
+
+.owl-carousel
+	padding: $grid/2 0
+
+.owl-wrapper-outer, .owl-wrapper, .owl-item
+	height: 420px
+
+.owl-item
+	padding-bottom: 20px
+
+.owl-controlls
+	/* border-top: 1px solid #CCC */
+	//padding: 28px 15px 0
+
+.owl-buttons
+	padding: 0 10px
+
+	> *
+		//+background-image(linear-gradient(#fff, #fafafa))
+		background: $brand
+		border-radius: 4px
+		color: #FFF
+		cursor: pointer
+		font-size: 28px
+		font-weight: 200
+		height: 55px
+		padding: $grid/4 $grid
+		width: 300px
+		margin: 5px auto auto auto
+
+		&.disabled
+			background: none
+			box-shadow: inset 0 0 0 2px #FAFAFA
+			color: #FAFAFA
+			cursor: default !important
+
+	.owl-prev
+		@extend .left
+
+		&:not(.disabled)
+			background: none
+			box-shadow: inset 0 0 0 2px #EEE
+			color: #CCC
+
+		&:before
+			@extend .left
+			content: "\2329  "
+			margin: 5px $grid/2 0 -14px
+
+
+	.owl-next
+		@extend .right
+		font-weight: 500
+		text-align: right
+
+		&:after
+			@extend .right
+			content: " \232A"
+			margin: 4px -14px 0 $grid/2
+
+#divParName
+	text-decoration: underline

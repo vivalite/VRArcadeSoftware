@@ -1,0 +1,1 @@
+This is for the dashboard barcode hardware module

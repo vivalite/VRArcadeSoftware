@@ -1,0 +1,1 @@
+This repository contain solutions used to test functionality of VR Game Selector.

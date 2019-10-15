@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VRGameSelectorServerDTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VRGameSelectorServerDTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Enums.ClientRunningMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="TIMING_ON" />
+      <xs:enumeration value="NO_TIMING_ON" />
+      <xs:enumeration value="ENDED_MANUAL" />
+      <xs:enumeration value="ENDED_TIMING" />
+      <xs:enumeration value="ENDED_EMERGENCY" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.ClientRunningMode" nillable="true" type="tns:Enums.ClientRunningMode" />
+  <xs:simpleType name="Enums.LiveClientStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="OFFLINE" />
+      <xs:enumeration value="ONLINE" />
+      <xs:enumeration value="GAMEOVER_FOR_CLEANING" />
+      <xs:enumeration value="CLEANING_DONE" />
+      <xs:enumeration value="IN_GAME_SELECTOR" />
+      <xs:enumeration value="IN_GAME_STARTING" />
+      <xs:enumeration value="IN_GAME" />
+      <xs:enumeration value="GAME_EXITING" />
+      <xs:enumeration value="ERROR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.LiveClientStatus" nillable="true" type="tns:Enums.LiveClientStatus" />
+</xs:schema>

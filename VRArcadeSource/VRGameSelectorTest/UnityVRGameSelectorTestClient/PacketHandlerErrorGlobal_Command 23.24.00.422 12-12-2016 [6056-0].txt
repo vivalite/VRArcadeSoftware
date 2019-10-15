@@ -1,0 +1,12 @@
+Base Exception Type: System.ArgumentException: Find can only be called from the main thread.
+Constructors and field initializers will be executed from the loading thread when loading a scene.
+Don't use this function in the constructor or field initializers, instead move initialization code to the Awake or Start function.
+  at (wrapper managed-to-native) UnityEngine.GameObject:Find (string)
+  at VRSelectorCore.HandleIncomingCommand (NetworkCommsDotNet.PacketHeader packetHeader, NetworkCommsDotNet.Connections.Connection connection, VRGameSelectorDTO.VRCommand vrCommand) [0x00000] in D:\My Document\Dropbox\!VR_Theme_Park\SoftwareProject\VRGameSelectorTest\UnityVRGameSelectorTestClient\Assets\Scripts\VRSelectorCore.cs:86 
+  at NetworkCommsDotNet.Tools.PacketTypeHandlerDelegateWrapper`1[VRGameSelectorDTO.VRCommand].Process (NetworkCommsDotNet.PacketHeader packetHeader, NetworkCommsDotNet.Connections.Connection connection, System.Object obj) [0x00000] in <filename unknown>:0 
+  at NetworkCommsDotNet.NetworkComms.TriggerGlobalPacketHandlers (NetworkCommsDotNet.PacketHeader packetHeader, NetworkCommsDotNet.Connections.Connection connection, System.Object returnObject, Boolean ignoreUnknownPacketTypeOverride) [0x00000] in <filename unknown>:0 
+
+Stack Trace:   at (wrapper managed-to-native) UnityEngine.GameObject:Find (string)
+  at VRSelectorCore.HandleIncomingCommand (NetworkCommsDotNet.PacketHeader packetHeader, NetworkCommsDotNet.Connections.Connection connection, VRGameSelectorDTO.VRCommand vrCommand) [0x00000] in D:\My Document\Dropbox\!VR_Theme_Park\SoftwareProject\VRGameSelectorTest\UnityVRGameSelectorTestClient\Assets\Scripts\VRSelectorCore.cs:86 
+  at NetworkCommsDotNet.Tools.PacketTypeHandlerDelegateWrapper`1[VRGameSelectorDTO.VRCommand].Process (NetworkCommsDotNet.PacketHeader packetHeader, NetworkCommsDotNet.Connections.Connection connection, System.Object obj) [0x00000] in <filename unknown>:0 
+  at NetworkCommsDotNet.NetworkComms.TriggerGlobalPacketHandlers (NetworkCommsDotNet.PacketHeader packetHeader, NetworkCommsDotNet.Connections.Connection connection, System.Object returnObject, Boolean ignoreUnknownPacketTypeOverride) [0x00000] in <filename unknown>:0 

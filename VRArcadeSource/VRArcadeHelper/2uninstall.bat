@@ -1,0 +1,1 @@
+.\VRArcadeHelper\bin\Debug\VRArcadeHelper.exe /u

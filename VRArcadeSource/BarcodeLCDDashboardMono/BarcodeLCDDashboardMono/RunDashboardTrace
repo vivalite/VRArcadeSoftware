@@ -1,0 +1,2 @@
+#!/bin/bash
+mono --debug --trace=N:BarcodeLCDDashboardMono /boot/VRArcade/BarcodeLCDDashboardMono.exe

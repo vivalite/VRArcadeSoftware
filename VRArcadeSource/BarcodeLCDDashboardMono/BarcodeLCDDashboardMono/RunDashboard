@@ -1,0 +1,9 @@
+#!/bin/bash
+SERVERIP=`grep '<UpdateServer' /boot/VRArcade/config.xml | cut -f2 -d">"|cut -f1 -d"<"`
+
+sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
+sudo wget -r -nH --cut-dirs=2 -N --no-parent --reject="index.html,web.config" -P /boot/VRArcade/ http://$SERVERIP/DashboardFirmware/
+sudo mount -o remount,ro / ; sudo mount -o remount,ro /boot
+
+mono /boot/VRArcade/BarcodeLCDDashboardMono.exe
+exit 200
