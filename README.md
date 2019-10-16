@@ -35,5 +35,5 @@ So, we were where we were. The virtual reality arcade management system became t
 - Have a way to hide bookeo / ticket printing / station dashboard / waver related function if not used.
 
 
-## Donation
-Currently almost all of the development for this software is done by me alone in the spare time, in addition to working on his full-time job. There is not really enough income to support a full-time developer at this point, and buying VR hardware and tools required to support all sorts of setups is quite expensive. Financially supporting helps a lot in moving things forwards. If this system helps you, please consider donation.
+## Sponsor
+Currently almost all of the development for this software is done by me alone in the spare time, in addition to working on his full-time job. There is not really enough income to support a full-time developer at this point, and buying VR hardware and tools required to support all sorts of setups is quite expensive. Financially supporting helps a lot in moving things forwards. If this system helps you, please consider sponsor.
