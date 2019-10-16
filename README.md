@@ -10,6 +10,8 @@ We went through all the initial hiccup of starting a business, such as renovatio
 
 So, we were where we were. The virtual reality arcade management system became the legacy of my closed store. Through here I would like to contribute the virtual reality arcade management system to the great virtual reality arcade operator community and the people like you. It’s fully functional and stable, free of charge and will remain free in the future! 
 
+
+
 Features:
 
   •	Supports 1 to 16 (or more) virtual reality gaming PC equipped with HTC VIVE. (If the controlling PC has a large screen it can support 40+ VR gaming PCs)
@@ -35,6 +37,8 @@ Features:
   •	Raspberry Pi based gaming station status display & barcode scanner. (The code is there but lacking document on how to make the hardware and hardened Linux system.)
 
   •	Bookeo integration. (Require setup)
+
+
 
 
 Future road map:
