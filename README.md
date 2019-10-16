@@ -1,6 +1,6 @@
 # OpenSource Virtual Reality Arcade Management System
 
-## The story
+## The Story
 3 years ago, me and my friends had the idea to open a virtual reality arcade. So, we started preparing, register company, finding store location, researching VR game, contact game developer and finding a system we can use to manage our perspective virtual reality arcade store.
 
 I am a software & electronic engineer with 19 years of experience and since we didn’t find any good virtual reality arcade management system at the time, I started developing our very own virtual reality arcade management system. It took me about 8 months and 22,000+ lines of code to finally complete the software and 1 more month to do internal test to work out everything smoothly. 
@@ -27,7 +27,7 @@ So, we were where we were. The virtual reality arcade management system became t
 
 
 
-## Future road map
+## Future Road Map
 - Better document.
 - Easy to use installer download so your won't need to compile the whole software yourself.
 - Test support on the HTC VIVE PRO.
@@ -37,3 +37,19 @@ So, we were where we were. The virtual reality arcade management system became t
 
 ## Sponsor
 Currently almost all of the development for this software is done by me alone in the spare time, in addition to working on his full-time job. There is not really enough income to support a full-time developer at this point, and buying VR hardware and tools required to support all sorts of setups is quite expensive. Financially supporting helps a lot in moving things forwards. If this system helps you, please consider sponsor.
+
+
+## License
+
+BSD 3. For detail please refer to the LICENSE file in the root directory.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
