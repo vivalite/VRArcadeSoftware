@@ -1,6 +1,6 @@
 # OpenSource Virtual Reality Arcade Management System
 
-## The story:
+## The story
 3 years ago, me and my friends had the idea to open a virtual reality arcade. So, we started preparing, register company, finding store location, researching VR game, contact game developer and finding a system we can use to manage our perspective virtual reality arcade store.
 
 I am a software & electronic engineer with 19 years of experience and since we didn’t find any good virtual reality arcade management system at the time, I started developing our very own virtual reality arcade management system. It took me about 8 months and 22,000+ lines of code to finally complete the software and 1 more month to do internal test to work out everything smoothly. 
@@ -10,7 +10,7 @@ We went through all the initial hiccup of starting a business, such as renovatio
 So, we were where we were. The virtual reality arcade management system became the legacy of my closed store. Through here I would like to contribute the virtual reality arcade management system to the great virtual reality arcade operator community and the people like you. It’s fully functional and stable, free of charge and will remain free in the future! 
 
 
-## Features:
+## Features
 
 - Supports 1 to 16 (or more) virtual reality gaming PC equipped with HTC VIVE. (If the controlling PC has a large screen it can support 40+ VR gaming PCs)
 - In HTC VIVE VR headset game selection menu. Player do not need to take off the headset to select a game.
@@ -27,7 +27,7 @@ So, we were where we were. The virtual reality arcade management system became t
 
 
 
-## Future road map:
+## Future road map
 - Better document.
 - Easy to use installer download so your won't need to compile the whole software yourself.
 - Test support on the HTC VIVE PRO.
