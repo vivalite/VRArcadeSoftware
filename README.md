@@ -11,34 +11,36 @@ We went through all the initial hiccup of starting a business, such as renovatio
 So, we were where we were. The virtual reality arcade management system became the legacy of my closed store. Through here I would like to contribute the virtual reality arcade management system to the great virtual reality arcade operator community and the people like you. It’s fully functional and stable, free of charge and will remain free in the future! 
 
 Features:
-•	Supports 1 to 16 (or more) virtual reality gaming PC equipped with HTC VIVE. (If the controlling PC has a large screen it can support 40+ VR gaming PCs)
 
-•	In HTC VIVE VR headset game selection menu. Player do not need to take off the headset to select a game.
+  •	Supports 1 to 16 (or more) virtual reality gaming PC equipped with HTC VIVE. (If the controlling PC has a large screen it can support 40+ VR gaming PCs)
 
-•	Game selection menu support 2 levels deep with each level maximum 32 items. (The optimal is 9 items on first level serve as categories and 16 items on each of the sub level)
+  •	In HTC VIVE VR headset game selection menu. Player do not need to take off the headset to select a game.
 
-•	In headset menu to show time left, exit game and call assistance.
+  •	Game selection menu support 2 levels deep with each level maximum 32 items. (The optimal is 9 items on first level serve as categories and 16 items on each of the sub level)
 
-•	Start timed or manual play session. When play time is up or manually end from the front desk controlling PC, the gaming station PC will exit the game and display configurable message.
+  •	In headset menu to show time left, exit game and call assistance.
 
-•	Support VR games distribute through Steam or manual installation.
+  •	Start timed or manual play session. When play time is up or manually end from the front desk controlling PC, the gaming station PC will exit the game and display configurable message.
 
-•	Controlling PC can remotely reboot / turn off gaming PC and disable keyboard / mouse / USB flash drive on gaming PC.
+  •	Support VR games distribute through Steam or manual installation.
 
-•	Individual game play time record can be further extracted for monthly billing / pay-per-use purpose.
+  •	Controlling PC can remotely reboot / turn off gaming PC and disable keyboard / mouse / USB flash drive on gaming PC.
 
-•	Waiver system integration. 
+  •	Individual game play time record can be further extracted for monthly billing / pay-per-use purpose.
 
-•	Check-in ticket thermo printer support. 
+  •	Waiver system integration. 
 
-•	Raspberry Pi based gaming station status display & barcode scanner. (The code is there but lacking document on how to make the hardware and hardened Linux system.)
+  •	Check-in ticket thermo printer support. 
 
-•	Bookeo integration. (Require setup)
+  •	Raspberry Pi based gaming station status display & barcode scanner. (The code is there but lacking document on how to make the hardware and hardened Linux system.)
+
+  •	Bookeo integration. (Require setup)
 
 
 Future road map:
-•	Test support on the HTC VIVE PRO.
 
-•	Better interface (Both managing client and the in-headset UI).
+  •	Test support on the HTC VIVE PRO.
 
-•	Have a way to hide bookeo / ticket printing / station dashboard / waver related function if not used.
+  •	Better interface (Both managing client and the in-headset UI).
+
+  •	Have a way to hide bookeo / ticket printing / station dashboard / waver related function if not used.
