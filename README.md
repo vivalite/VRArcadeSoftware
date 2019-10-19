@@ -1,5 +1,13 @@
 # OpenSource Virtual Reality Arcade Management System
 
+![](https://raw.githubusercontent.com/vivalite/VRArcadeSoftware/master/DOCs/Images/3.2.png)
+
+![](https://raw.githubusercontent.com/vivalite/VRArcadeSoftware/master/DOCs/Images/1.1.PNG)
+
+[View Gaming Station Client Screenshots](https://github.com/vivalite/VRArcadeSoftware/wiki/Gaming-Station-Client-Screenshot)
+
+[View Managing System Screenshots](https://github.com/vivalite/VRArcadeSoftware/wiki/Managing-System-Screenshot)
+
 ## The Story
 3 years ago, me and my friends had the idea to open a virtual reality arcade. So, we started preparing, register company, finding store location, researching VR game, contact game developer and finding a system we can use to manage our perspective virtual reality arcade store.
 
