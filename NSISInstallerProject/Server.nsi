@@ -138,10 +138,14 @@ SectionEnd
 
 Section /o "Install Examples" sec2
 
+SimpleSC::StopService "VRArcadeServerService" 1 30
+
 SetOutPath "$INSTDIR"
 File /r ".\SupportingFiles\Example.sql"
 ReadEnvStr $0 COMSPEC
 nsExec::Exec '$0 /c "$PROGRAMFILES64\MariaDB 10.4\bin\mysql.exe" --user=root --password=Dfsa3@4SFdA#dssaEi vrarcade < Example.sql'
+
+SimpleSC::StartService "VRArcadeServerService" "" 30
 
 SectionEnd
 
