@@ -1,0 +1,448 @@
+               EPSON OPOS ADK for .NET Version 1.12.25  Release Notes
+                                                       Seiko Epson Corporation
+ 
+                                                                 Feb. 17, 2017
+
+1. Outline
+    EPSON OPOS ADK for .NET Version 1.12.25 has been released. Using this
+    release, you can develop applications that are compatible with Microsoft
+    POS for .NET 1.12 (corresponding to UnifiedPOS specification Ver 1.12).
+    When developing applications, use a separate development environment such
+    as Microsoft Visual Studio .NET.
+
+    This release note contains information for multiple packages.
+     - EPSON OPOS ADK for .NET 1.12.25 Standard install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T88V only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T88VI only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T70II only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T20 only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T81 only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T82 only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T81II only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T82II only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T90II only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-L90 only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-T20II only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-P20 only install
+     - EPSON OPOS ADK for .NET 1.12.25 TM-P80 only install
+
+2. Confirmed operating environment
+    Operation of EPSON OPOS ADK for .NET has been confirmed in the following
+    environment.
+  (1) OS (Operating system)
+    Windows Embedded for Point of Service (32bit)
+    Windows XP Professional SP3 (32bit)
+    Windows Vista SP2 (32bit/64bit)
+    Windows Server 2008 SP2 (32bit/64bit)
+    Windows Server 2008 R2 SP1 (64bit)
+    Windows Server 2012 (64bit)
+    Windows Server 2012 R2 (64bit)
+    Windows 7 SP1 (32bit/64bit)
+    Windows 8 (32bit/64bit)
+    Windows 8.1 (32bit/64bit)
+    Windows 10 (32bit/64bit)
+    Windows Embedded Standard (32bit)
+    Windows Embedded POSReady 2009 (32bit)
+    Windows Embedded Standard 7 (32bit/64bit)
+    Windows Embedded POSReady 7 (32bit/64bit)
+  (2) .NET Framework
+    Microsoft .NET Framework 2.0
+    Microsoft .NET Framework 3.0
+    Microsoft .NET Framework 3.5
+  (3) Programming languages
+    Microsoft Visual C# .NET
+    Microsoft Visual Basic .NET
+  (4) Build platform settings
+    The build platform for applications must be set to "Any CPU".
+  (5) POS for .NET
+    Microsoft POS for .NET 1.12
+
+3. Installation and uninstallation
+    Follow the procedure in "EPSON OPOS ADK for .NET Installation Guide" for
+    installation and uninstallation.
+
+4.  Support devices of OPOS.NET Standard install
+    Please refer to "SupportedDevicesList.txt" for details.
+
+5. Notes of OPOS.NET
+5.1 Windows 8 or later
+    .net Framework 4.5 come pre-installed in Windows 8 or later, but POS for .net is
+    only supported up to .net Framework 3.5. 
+    Please see the following link for instructions on enabling .net Framework
+    3.5 on Windows 8 or later.
+    http://msdn.microsoft.com/en-us/library/vstudio/hh506443.aspx
+
+5.2 Installation and uninstallation
+    1) When installing the software, create a directory with the name
+        "EPSON" in the following directory.
+
+       Windows XP/Embedded:
+         <System Drive>:\Documents and Settings\All Users\
+       Windows Vista or newer:
+         <System Drive>:\ProgramData\
+
+       Temporary files and information files required by ServiceObject
+       operations are saved in this "EPSON" directory. Do not delete the
+       directory.
+
+    2) Please restart your system after upgrade install When installing by silent
+       from the older versions(Ver.1.11.20 - Ver.1.12)
+
+5.3 Interface connection
+5.3.1 Parallel connection
+    1) We checked the performance of the program at LPT1.
+    2) Please set "Bi-Directional" for either the ECP or EPP settings in the 
+       parallel mode settings in the BIOS.
+    3) Depending on the BIOS, there is a possibility of "ECP doesn't work but 
+       EPP does work" or conversely "EPP doesn't work but ECP does work" 
+       occurring. If it doesn't work properly, please change these settings 
+       and try again.
+    4) After turning the device off, there is a delay of several seconds 
+       before the ServiceObject recognizes that the power is off. Please 
+       consider in the application.
+    5) In 64bit OS, the following devices are not supported.
+       -TM-H5000II/TM-H5200/TM-J7000/TM-J7100/TM-J7500/TM-J7600/TM-U230/
+        TM-U675/TM-U950
+
+5.3.2 USB connection
+     1) multiple models of the same type:
+      If multiple models of the same type are used in USB connections at the 
+      same time, settings must be configured manually(See "5.3.2.1 Procedure").
+      Note that the procedure varies by model.
+
+      - TM-H5000II/TM-H5200/TM-J7000/TM-J7100/TM-J7500/TM-J7600/TM-U230/TM-U675
+
+5.3.2.1 Procedure
+      1) Set the USB port setting [Port Name Type] to [Serial Number].
+      2) Specify the USB serial number as the port name.
+      
+      The USB serial number is a serial number provided exclusively for USB.
+      The USB serial number can be checked with the following procedure.
+
+      - Perform a printer self-test print.
+        Generally, if the printer is turned on with the printer cover closed
+        and the FEED switch held down, self-test printing is performed on roll
+        paper.
+      - The serial number can be identified from the print results.
+        When the print results are in format a), the part shown as "ID" is
+        the USB serial number (in the example below YYYYYYYYYYYYYY is the
+        serial number). When the print results are in format b), the USB
+        serial number is the same as the printer serial number. In this case,
+        check the label attached to the printer.
+
+        a) When the USB serial number is printed
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          Interface UB-UXXXX Ver.X.XX
+           ID  :YYYYYYYYYYYYYY
+              :
+              :
+          ----------
+
+        b) When the USB serial number is not printed
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          USB Interface or other
+              :
+              :
+          ----------
+
+          * "USB Interface or other" shown above may be printed simply as
+            "USB Interface."
+
+    Note that when setting the device using this method, changing a device
+    with a different USB serial number, requires changing the SetupPOS
+    settings.
+
+    If the "Found new hardware wizard" is displayed when the printer is
+    turned ON/OFF, cancel the wizard and install the EPSON Advanced Printer
+    Driver (Version 4.50 or later).
+
+5.3.3 Network connection
+    1) We checked the performance of the program, connecting with a maximum of 
+       20 printers via the network interface.
+    2) Default guest account of OS and the Ethernet interface.
+       Note: A known workaround is to not use the "Default" guest account,
+             but to create and use another guest account.
+    3) Please exercise caution to the following points when using the Network 
+       Interface Device.
+        - During use the OPOS.NET driver, the TM printer's power Off / On 
+          operation is supported, but after it is turned On, it cannot be 
+          guaranteed that it will reconnect, so exercise caution. During use 
+          the OPOS.NET driver, that PC has a monopoly on its connection with 
+          the TM printer. (Another PC cannot connect with it.) However, if the
+          TM printer's power is turned OFF once, then turned On again, any PC 
+          existing on the network can connect with that TM printer. At that 
+          time, the OPOS.NET of a PC which is in the middle of a Claim will 
+          attempt to reconnect automatically, but if another PC's OPOS.NET also
+          attempts to make a Claim, it is not clear which will be able to make 
+          the connection. The PC which is the earliest to request connection 
+          can establish the connection. Accordingly, a TM printer which has had
+          its power turned Off and On after Open and Claim, may not necessarily
+          be available to reconnect to, so exercise caution.  When the TM 
+          printer's power is turned On.
+        - It can take up to maximun 20 seconds when turning on or resetting a
+          TM printer, or using a network function.  Please wait for this
+          interval to pass before starting any processing.
+
+5.3.4 Bluetooth connection
+    1) After turning off TM printer power, wait at least 20 seconds before 
+       turning power back on. The printer will not print if power is turned 
+       on before this time has elapsed.
+    2) When the power supply of a printer is Off, if a Claim method is 
+       performed,before a response will return, it will take 7 seconds or more.
+
+5.4 Devices
+5.4.1 POSPrinter
+    1) Multi-tone printing:
+       There are following two ways for gray scale printing:
+       - PrintBitmap
+         Set to "Multi Tone" from SetupPOS [Device Details]->[Gradation], or,
+         Change the mode by DirectIO
+         method (DI_SET_BITMAP_PRINTING_TYPE)
+         For your information, white line might be seen in the print result when
+         gray scale printing via serial or Ethernet interface. Also, printing
+         speed might be slower.
+       -NVRAM
+         To register images in the NVRAM, it is necessary to register the image
+         by the utility software at first, then print by DerectIO method
+         (DI_PRINT_FLASH_BITMAP2).
+    2) Data sent from the printer after OPOS.NET is used
+       Device settings are overwritten once OPOS.NET is used.  Depending on this
+       action, data could subsequently be sent from the device.  If you then 
+       directly connect to the device without using OPOS.NET, please disregard
+       the following data.
+        - 3-byte printer status sent when the power is turned ON
+        - 3-byte power ON notification sent when the power is turned ON
+
+5.4.2 LineDisplay
+    1) MarqueeRepeatWait and MarqueeUnitWait property:
+       When setting MarqueeRepeatWait or MarqueeUnitWait below 300msec with DM-D30,
+       it'll be 300msec.
+
+5.5 Others
+    1) Stand by/hibernation mode for the OS
+       Since it is possible that the driver will become unstable if the 
+       computer goes into stand by/hibernation mode while the printer is in 
+       use, please avoid the use of stand by/hibernation mode.
+    2) Sample program
+      - When you use the sample program, the Logon ID needs to be the
+        Administrator account group.
+      - Register with the logical device name.
+          POSPrinter       : PosPrinter
+          LineDisplay      : LineDisplay
+          Micr             : Micr
+          CheckScanner     : CheckScanner
+          CashDrawer       : CashDrawer
+          Scanner          : Scanner
+          Msr              : Msr
+          Keylock          : Keylock
+          ElectronicJournal: ElectronicJournal
+      - The sample program shows an example(s) of control methods.
+        That is why, it does not guarantee the correct operations for
+        all the settings of all the devices.
+    3) The EPSON original constant is defined in the
+       "Epson.opos.tm.common.dll."
+       When using the EPSON original constant, add a reference to
+       "Epson.opos.tm.common.dll" in the install directory.
+    4) The logo utility (TMFlogo, etc.)
+       The logo utility is not in this package. For uploading logo data to
+       nonvolatile memory, please use SetBitmap method, or please obtain the
+       logo utility.
+    5) When using the tracing (log) function
+       Tracing results are saved in the following directory.
+
+       Windows XP/Embedded:
+         <System Drive>:\Documents and Settings\All Users\EPSON\pos\tm\Trace
+       Windows Vista or newer:
+         <System Drive>:\ProgramData\EPSON\pos\tm\Trace
+
+6. Change History of OPOS.NET Standard install
+    [Version 1.12.25]
+        - TM-T81II-42C was added as a supported device.
+        - Added support for ARP (Automatic Reduction of Paper) function in 
+          TM-T81II.
+        - Added the Optional external buzzer.(TM-T81II)
+    [Version 1.12.24]
+        - USB was added to the TM-U950 support interfaces.
+    [Version 1.12.23]
+     (1)POSPrinter
+        - TM-T88VI was added as a supported device.
+        - TM-T88VI and TM-m30 was added support for Printing Using Multiple Interfaces.
+        - DM-D30 was supported standalone connection.
+        - Yen sign is supported with setting back slash for Japanese models.
+        - The bug is fixed that the printing fails in case the printer job is sent to some printers
+          at same time.
+        - The bug is fixed that the initialization fails in case the battery status is changed while
+          the printer driver is initializing.
+     (2)LineDisplay
+        - Bluetooth, Parallel, and Ethernet was added to the DM-D110 support interfaces.
+        - Bluetooth, Parallel, and Ethernet was added to the DM-D210 support interfaces.
+        - Serial and Parallel was added to the DM-D30 support interfaces.
+    [Version 1.12.22]
+        - TM-m10 was added as a supported device.
+        - TM-m30 was added as a supported device.
+        - DM-D30 was added as a supported device.
+        - Added support for Windows10 (32bit/64bit)
+
+       * Note
+         TM-m10 and TM-m30 are not supported printing using multiple interfaces.
+         DM-D30 is not supported standalone connection.
+    [Version 1.12.21]
+       - Added support for Auto Cutter function in TM-P80.
+       - Added support for Auto Cutter function in TM-P80-42C.
+       - TM-L90LinerFree was added as a supported device.
+    [Version 1.12.20]
+       - Fixed an issue that may fail to claim POSPrinter of Bluetooth connection.
+    [Version 1.12.19]
+       - TM-P20 was added as a supported device.
+    [Version 1.12.17]
+     (1)POSPrinter
+       - Bluetooth was added to the TM-T20II support interfaces.
+       - Bluetooth was added to the TM-T20II-42C support interfaces.
+       - Bluetooth was added to the TM-T88V support interfaces.
+       - Bluetooth was added to the TM-T70II support interfaces.
+     (2)CashDrawer
+       - Bluetooth was added to the CashDrawer support interfaces.
+    [Version 1.12.15]
+       - Added support for Windows 8.1 (32bit), Windows 8.1 (64bit), and 
+         Windows Server 2012 R2 (64bit).
+       - Added support for ARP (Automatic Reduction of Paper) function in 
+         TM-T82.
+       - Added support for ARP (Automatic Reduction of Paper) function in 
+         TM-T82-42C.
+       - Parallel was added to the TM-T82 support interfaces.
+       - Parallel was added to the TM-T82-42C support interfaces.
+    [Version 1.12.14]
+       - TM-P80 was added as a supported device.
+       - TM-P80-42C was added as a supported device.
+    [Version 1.12.13]
+       - TM-T20II was added as a supported device.
+       - TM-T20II-42C was added as a supported device.
+    [Version 1.12.12]
+       - TM-T90II was added as a supported device.
+    [Version 1.12.11]
+       - TM-L90 Simplified Chinese(GB18030) model was added as a supported device.
+       - Added support for ARP (Automatic Reduction of Paper) function in TM-L90.
+       - Added support for GS1, Composit, Datamatrix and Micro QR code symbols in TM-L90.
+    [Version 1.12.9]
+       - TM-T70II was added as a supported device.
+    [Version 1.12.8]
+       - TM-P60IIPEELER was added as a supported device.
+    [Version 1.12.7]
+       - Added support for Windows 8 (32bit), Windows 8 (64bit), and 
+         Windows Server 2012 (64bit).
+       - TM-T82II was added as a supported device.
+       - TM-T82II-42C was added as a supported device.
+    [Version 1.12.6]
+       - TM-P60II was added as a supported device.
+    [Version 1.12.3]
+      No change.
+    [Version 1.12.2]
+     (1)POSPrinter
+       - TM-T81II Simplified Chinese model was added as a supported device.
+    [Version 1.12]
+     (1)New function based on the UPOS V1.12 listed below
+         POSPrinter:
+           -ESC sequences
+             Strike-though
+           - Define GS1 bar code symbols for PrintBarCode method
+     (2)SetupPOS
+       - Changed USB interface setting method.
+       - The device can be tested by SetupPOS.
+     (3) POSPrinter
+       - Increase variety of ESC/POS command response which can be notified by
+         DirectIOEvent.
+       - Remove restriction on the number of images which can be stored in the
+         nonvolatile memory (NVRAM). See "SetBitmap method" in each printer 
+         manual for the detail.
+
+      Note:The above changes are for the following categories and devices.
+          Category:POSPrinter,MICR,CheckScanner,LineDisplay,CashDrawer
+          Device:TM-H6000II/III/IV,TM-T20,TM-T70,TM-T88III/IV/V,TM-L90
+                  TM-T90,TM-U220
+    [Version 1.11.20]
+     (1) Common
+       - Added support for Windows Embedded POSReady 7 (32bit), 
+         Windows Embedded POSReady 7 (64bit).
+     (2) POSPrinter
+       - Added support for ARP (Automatic Reduction of Paper) function in 
+         TM-T88V.
+    [Version 1.11.18]
+     (1) POSPrinter
+       - Ethernet was added to the TM-T20 support interfaces.
+       - Ethernet was added to the TM-T20-42C support interfaces.
+     (2) ElectronicJournal
+       - Ethernet was added to the TM-T20 support interfaces.
+       - Ethernet was added to the TM-T20-42C support interfaces.
+    [Version 1.11.17]
+     (1) POSPrinter
+       EPSON OPOS ADK for .NET 1.11.17 TM-T82 only install:
+        - Added support for South Asian languages in a multilingual model of 
+          the TM-T82.
+        - Added support for South Asian languages in a multilingual model of 
+          the TM-T82-42C.
+        - Ethernet was added to the TM-T82 support interfaces.
+        - Ethernet was added to the TM-T82-42C support interfaces.
+    [Version 1.11.16]
+     (1) Common
+       - Added support for Windows 7 SP1 (32bit), Windows 7 SP1 (64bit), and 
+         Windows Server 2008 R2 SP1 (64bit).
+     (2) POSPrinter
+       - TM-H6000IV Multilingual Character model was added as a supported 
+         device.
+    [Version 1.11.15]
+     (1) POSPrinter
+       - TM-T82 model was added as a supported device.
+       - TM-T82-42C model was added as a supported device.
+    [Version 1.11.14]
+     (1) Common
+       - Added support for Windows Embedded Standard 7 (32bit) and Windows
+         Embedded Standard 7 (64bit).
+     (2) POSPrinter
+       - Added support for the TM-H6000IV(ANK model)
+       - Added support for the TM-H2000
+       - Added support for the TM-T81(Simplified Chinese(GB18030) model)
+       - Added support for the TM-T81(South Asia model)
+     (3) MICR
+       - Added support for the TM-H6000IV(ANK model)
+       - Added support for the TM-H2000
+     (4) ElectronicJournal
+       - Added support for the TM-H6000IV(ANK model)
+    [Version 1.11.13]
+     (1) POSPrinter
+       - Added support for the TM-T20(Japanese model)
+       - Added support for the TM-T20-42C(Japanese model)
+       - Added support for the TM-T20 with a serial connection.
+       - Added support for the TM-T20-42C with a serial connection.
+     (2) ElectronicJournal
+       - Added support for the TM-T20(Japanese model)
+       - Added support for the TM-T20-42C(Japanese model)
+       - Added support for the TM-T20 with a serial connection.
+       - Added support for the TM-T20-42C with a serial connection.
+    [Version 1.11.12]
+     (1) POSPrinter
+       - Added support for the TM-T88V(Japanese model)
+       - Added support for the TM-T20
+       - Added support for the TM-T20-42C
+       - Added the Multi-tone printing feature.(TM-T88V only)
+       - Added the Optional external buzzer.(TM-T88V only)
+     (2) ElectronicJournal
+       - Added support for the TM-T20
+       - Added support for the TM-T20-42C
+    [Version 1.11.11]
+     (1) Common
+       - Added support for the Unit package
+       - Added support for Windows Server 2008 SP2, Windows Server 2008 R2,
+         Windows Embedded Standard, Windows Embedded POSReady 2009, and
+         Windows 7
+     (2) POSPrinter
+       - Added support for the TM-T88V
+       - Added a setting to allow the default character set to be changed.
+         (TM-T88V only)
+     (3) ElectronicJournal
+       - Added support for the TM-T88V

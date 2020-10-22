@@ -1,0 +1,330 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF340F83-38F1-4F34-8E3C-07425165444D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>TestApp</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TestApplication</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.PointOfService">
+      <Name>Microsoft.PointOfService</Name>
+      <HintPath>..\..\..\Microsoft.PointOfService.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BiometricsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BiometricsScreen.Designer.cs">
+      <DependentUpon>BiometricsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BumpBarScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BumpBarScreen.Designer.cs">
+      <DependentUpon>BumpBarScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashDrawerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CashDrawerScreen.Designer.cs">
+      <DependentUpon>CashDrawerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckScannerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckScannerScreen.Designer.cs">
+      <DependentUpon>CheckScannerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoinDispenserScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CoinDispenserScreen.Designer.cs">
+      <DependentUpon>CoinDispenserScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceScreenBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeviceScreenBase.Designer.cs">
+      <DependentUpon>DeviceScreenBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectIOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectIOForm.Designer.cs">
+      <DependentUpon>DirectIOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorEventDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeylockScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KeylockScreen.Designer.cs">
+      <DependentUpon>KeylockScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineDisplayScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LineDisplayScreen.Designer.cs">
+      <DependentUpon>LineDisplayScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MicrScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MicrScreen.Designer.cs">
+      <DependentUpon>MicrScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsrScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MsrScreen.Designer.cs">
+      <DependentUpon>MsrScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PinPadScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PinPadScreen.Designer.cs">
+      <DependentUpon>PinPadScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosKeyboardScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PosKeyboardScreen.Designer.cs">
+      <DependentUpon>PosKeyboardScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosPrinterScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PosPrinterScreen.Designer.cs">
+      <DependentUpon>PosPrinterScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesForm.Designer.cs">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFIDScannerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RFIDScannerScreen.Designer.cs">
+      <DependentUpon>RFIDScannerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScaleScreen.Designer.cs">
+      <DependentUpon>ScaleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScannerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScannerScreen.Designer.cs">
+      <DependentUpon>ScannerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureCaptureScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignatureCaptureScreen.Designer.cs">
+      <DependentUpon>SignatureCaptureScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartCardRWScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SmartCardRWScreen.Designer.cs">
+      <DependentUpon>SmartCardRWScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="BiometricsScreen.resx">
+      <DependentUpon>BiometricsScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BumpBarScreen.resx">
+      <DependentUpon>BumpBarScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashDrawerScreen.resx">
+      <DependentUpon>CashDrawerScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckScannerScreen.resx">
+      <DependentUpon>CheckScannerScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoinDispenserScreen.resx">
+      <DependentUpon>CoinDispenserScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceScreenBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeviceScreenBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectIOForm.resx">
+      <DependentUpon>DirectIOForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorEventDlg.resx">
+      <DependentUpon>ErrorEventDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeylockScreen.resx">
+      <DependentUpon>KeylockScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineDisplayScreen.resx">
+      <DependentUpon>LineDisplayScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MicrScreen.resx">
+      <DependentUpon>MicrScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsrScreen.resx">
+      <DependentUpon>MsrScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PinPadScreen.resx">
+      <DependentUpon>PinPadScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosKeyboardScreen.resx">
+      <DependentUpon>PosKeyboardScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosPrinterScreen.resx">
+      <DependentUpon>PosPrinterScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesForm.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFIDScannerScreen.resx">
+      <DependentUpon>RFIDScannerScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleScreen.resx">
+      <DependentUpon>ScaleScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScannerScreen.resx">
+      <DependentUpon>ScannerScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureCaptureScreen.resx">
+      <DependentUpon>SignatureCaptureScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartCardRWScreen.resx">
+      <DependentUpon>SmartCardRWScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticsForm.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

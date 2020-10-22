@@ -1,0 +1,443 @@
+               EPSON OPOS ADK for .NET Version 1.12.25 リリースノート
+                                                       セイコーエプソン株式会社
+                                                                  2017年2月17日
+
+1. 概要
+    EPSON OPOS ADK for .NET Version 1.12.25をリリースいたします。本リリースを
+    使用することで、Microsoft POS for .NET 1.12（UnifiedPOS仕様書第1.12版相当）
+    に準拠したアプリケーションを開発することができます。
+    アプリケーションの開発に際しましては、Microsoft Visual Studio .NET等の開発
+    環境を別途ご用意ください。
+
+    本リリースノートには複数のパッケージの情報が記載されています。
+     ・EPSON OPOS ADK for .NET 1.12.25 統合パッケージ
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T88V単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T88VI単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T70II単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T20単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T81単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T82単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T81II単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T82II単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T90II単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-L90単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-T20II単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-P20単体パッケージ(CD同梱)
+     ・EPSON OPOS ADK for .NET 1.12.25 TM-P80単体パッケージ(CD同梱)
+
+2. 動作確認環境
+    本製品は、以下の環境で動作確認を行っています。
+  (1) OS（オペレーティングシステム）
+    Windows Embedded for Point of Service (32ビット版)
+    Windows XP Professional SP3 (32ビット版)
+    Windows Vista SP2 (32ビット／64ビット版)
+    Windows Server 2008 SP2 (32ビット／64ビット版)
+    Windows Server 2008 R2 SP1 (64ビット版)
+    Windows Server 2012 (64ビット版)
+    Windows Server 2012 R2 (64ビット版)
+    Windows 7 SP1 (32ビット／64ビット版)
+    Windows 8 (32ビット／64ビット版)
+    Windows 8.1 (32ビット／64ビット版)
+    Windows 10 (32ビット／64ビット版)
+    Windows Embedded Standard (32ビット版)
+    Windows Embedded POSReady 2009 (32ビット版)
+    Windows Embedded Standard 7 (32ビット／64ビット版)
+    Windows Embedded POSReady 7 (32ビット／64ビット版)
+  (2) .NET Framework
+    Microsoft .NET Framework 2.0
+    Microsoft .NET Framework 3.0
+    Microsoft .NET Framework 3.5
+  (3) プログラミング言語
+    Microsoft Visual C# .NET
+    Microsoft Visual Basic .NET
+  (4) ビルドのプラットフォーム設定 
+    アプリケーションのビルドのプラットフォーム設定では、必ず「Any CPU」を選択し
+    てください。
+  (5) Microsoft POS for .NET
+    Microsoft POS for .NET 1.12
+
+3. インストール・アンインストール
+    インストールおよびアンインストールは、「EPSON OPOS ADK for .NET インストー
+    ルガイド」に記載されている手順にしたがって、行ってください。
+
+4. サポートデバイス
+    詳細は、「SupportedDevicesList_ja.txt」を参照してください。
+
+5. 注意制限
+5.1 Windows8以降について
+    Windows8以降は.net Framework4.5が標準でインストールされていますが、POS for .net
+    は、.net Framework3.5までのサポートになります。
+    Windows8以降で、.net Framework3.5を有効にする方法は、こちらを参照してください。
+    http://msdn.microsoft.com/ja-jp/library/vstudio/hh506443.aspx
+
+5.2 インストール・アンインストールについて
+    1) インストール時に日本語版を選択した場合、下記のマニュアルはインストールさ
+       れません。下記のマニュアルが必要な場合は、英語版を選択してください。
+       ・POSPrinter : TM-H5200、TM-H2000、TM-T81、TM-T81II、TM-T82
+                      TM-T82-42C TM-T82II、TM-T82II-42C、TM-P80、TM-P80-42C
+       ・MICR : 全般
+       ・CheckScanner : 全般
+
+    2) インストール時、以下のディレクトリに"EPSON"という名前でディレクトリを作成
+       します。
+        Windows XP/Embedded:
+         <System Drive>:\Documents and Settings\All Users\
+        Windows Vista以降:
+         <System Drive>:\ProgramData\
+
+       この"EPSON"ディレクトリ以下に、ServiceObjectが動作する上で必要な一時ファ
+       イルや情報ファイルを保存しますので、このディレクトリは削除しないでくださ
+       い。
+
+    3) 本製品を前バージョン(Ver.1.11.20～Ver.1.12)に上書きサイレントインストール
+       した場合、システムの再起動を行ってください。
+
+5.3 インターフェイスについて
+5.3.1 パラレル接続
+    1) LPTポートは、LPT1で動作確認を行っています。
+    2) BIOSで設定するパラレルのモードについては、ECPやEPPなどの"Bi-Directional"
+       を設定してください。
+    3) BIOSによっては、「ECPでは正常動作しないがEPPでは正常動作する」場合や、逆
+       に「EPPでは正常動作しないがECPでは正常動作する」場合があります。正常に動
+       作しない場合は、本設定を変更して動作確認を行ってください。
+    4) デバイスの電源をOFFしてから、ServiceObjectが電源OFFを認識するまでには、
+       数秒の遅れが生じますので、アプリケーションでこれを考慮してください。
+    5) 64bitOSにおいて、下記のデバイスはサポートしていません。
+       -TM-H5000II/TM-H5200/TM-J7000/TM-J7100/TM-J7500/TM-J7600/TM-U230/
+        TM-U675/TM-U950
+
+5.3.2 USB接続
+    5) USB接続で同系機種を複数同時に使用する場合は、下記のデバイスは「5.3.2.1 
+       手順」の設定を行ってください。
+       -TM-H5000II/TM-H5200/TM-J7000/TM-J7100/TM-J7500/TM-J7600/TM-U230/TM-U675
+
+      上記以外の機種をお使いの場合は、SetupPOSにて設定が可能です。
+
+5.3.2.1 手順
+      1) USBのポート設定の[ポート名の指定方法]を[ポート名]に設定します。
+      2) ポート名として、USBのシリアル番号を指定します。
+      
+      USBのシリアル番号とは、USB専用に用意されているシリアル番号のことです。USB
+      のシリアル番号は、以下の手順で確認できます。
+
+      －プリンタのセルフテスト印刷を実行する。
+        一般的に、プリンタのカバーを閉じた状態でレシート紙送りスイッチ(FEED SW)
+        を押しながら電源投入すると、ロール紙へのセルフテスト印刷が行われます。
+      －印字結果によって、シリアル番号を識別する。
+        印字した結果がa)の形式の場合は、"ID"で示される部分がUSBのシリアル番号に
+        なります（下記の場合、YYYYYYYYYYYYYYの部分がシリアル番号です）。印字し
+        た結果が、b)の形式の場合は、USBのシリアル番号はプリンタ本体のシリアル番
+        号と同じになっています。この場合、プリンタ本体に貼付されているラベルを
+        ご確認ください。
+
+        a) USBのシリアル番号が印刷される場合
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          Interface UB-UXXXX Ver.X.XX
+           ID  :YYYYYYYYYYYYYY
+              :
+              :
+          ----------
+
+        b) USBのシリアル番号が印刷されない場合
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          USB Interface or other
+              :
+              :
+          ----------
+
+          ※上記"USB Interface or other"の部分は、単に"USB Interface"と印字され
+            る場合もあります。
+
+      なお、この方法を用いてデバイスを設定している場合は、USBのシリアル番号が異
+      なっているデバイスと交換すると、その都度、SetupPOSの設定を変更する必要が
+      ありますのでご注意ください。
+
+      プリンター電源ON/OFF時に「新しいハードウェアの検出ウィザード」が表示され
+      た場合は、検出ウィザードをキャンセルし、EPSON Advanced Printer Driver(Ver
+      sion 4.50以降)をインストールしてください。 
+
+5.3.3 ネットワーク接続
+    1) ネットワークポートは、最大20台のPOSPrinterを接続して動作確認を行っていま
+       す。
+    2) OSにデフォルトで登録されているGuestアカウントでログインした場合にEthernet
+       インターフェイスのデバイスを使用することは出来ません。
+       この場合は、OSにデフォルトで登録されているGuestアカウントを使用せず、別の
+       アカウントを作成し使用してください。
+    3) ネットワークインターフェイス機器をご利用の場合は、以下の点にご注意くださ
+       い。
+        - TMプリンターの電源OFF/ONの動作をサポートしていますが、電源ON後に必ず
+          再接続することを保証できませんのでご注意ください。
+          そのPCとTMプリンターは独占して接続しています（他のPCとそのTMプリンター
+          との接続はできません）。しかし、TMプリンターの電源を一旦OFFし、再度ON
+          した場合、そのTMプリンターはネットワーク上に存在するどのPCとも接続可能
+          な状態となります。この時、動作中のOPOSは、自動的に再接続を試みますが、
+          他のPCのOPOSがClaimしようとした場合はどちらが接続できるか不明です。
+          一番速く接続要求をしたPCが接続を確立します。よって、電源OFF/ONはサポー
+          トしているものの、必ず再接続できるとは限りませんのでご注意ください。 
+        - TMプリンターの電源投入時、リセット時、およびネットワーク機能を作動さ
+          せるまでに最大20秒程かかる場合がありますので、この時間経過後に処理を
+          開始してください。
+
+5.3.4 Bluetooth接続
+    1) プリンターの電源をOFFにしてから約20秒間は、電源をONにしても印刷すること
+　　　 ができません。
+    2) プリンターの電源がOFFの時、Claimメソッドを実行すると、レスポンスが返って
+　　　 くるまでに7秒以上かかります。
+
+5.4 デバイスについて
+5.4.1 POSPrinter
+    1) 多諧調印刷の方法
+       -PrintBitmap
+         SetupPOSの「デバイス設定」→「階調」の設定を「多諧調」に設定するか、
+         DirectIOメソッド(DI_SET_BITMAP_PRINTING_TYPE)でモードを切り替えてください。
+         なお、多階調印字を行う場合、シリアルとEthernetインターフェイスでは、多階
+         調に設定すると、印字結果に白い筋が入る可能性があります。また、イメージ
+         データの印字速度が遅くなる可能性があります。
+       -不揮発性メモリ
+         不揮発性メモリにイメージを登録する場合は、ユーティティでイメージを登録し、
+         DerectIOメソッド(DI_PRINT_FLASH_BITMAP2)を使って印字してください。
+    2) OPOS.NET使用による以降のプリンター送信データについて
+       一旦OPOS.NETを使用することにより、デバイス設定が書き換えられます。これに
+      より次のデータがデバイスから送信されますので、OPOS.NETを使用せずに直接デ
+      バイスを使用する場合には、このデータを読み捨ててください。
+        - 電源ONの際に送信される3バイトのプリンターステータス
+        - 電源ONの際に送信される3バイトの電源ON通知
+
+5.4.2 LineDisplay
+    1) MarqueeRepeatWaitとMarqueeUnitWaitプロパティについて
+       DM-D30でMarqueeRepeatWaitまたはMarqueeUnitWaitを300msec以下に設定した場合は
+       300msecで動作します。
+
+5.5 その他
+    1) OSのスタンバイ/休止状態モード
+       プリンターが動作している時にコンピューターがスタンバイ/休止状態に移行す
+       るとドライバーの動作が不安定になる場合がありますので、コンピューターのス
+       タンバイ/休止状態は使用しないでください。
+    2) サンプルプログラムについて
+      ・サンプルプログラムを使用する場合は、Administrator権限で実行してください。
+      ・以下の論理デバイス名で登録してください。
+          POSPrinter       : PosPrinter
+          LineDisplay      : LineDisplay
+          Micr             : Micr
+          CheckScanner     : CheckScanner
+          CashDrawer       : CashDrawer
+          Scanner          : Scanner
+          Msr              : Msr
+          Keylock          : Keylock
+          ElectronicJournal: ElectronicJournal
+      ・サンプルプログラムでは、制御方法の例を示しています。そのため、全デバイス
+        の全設定での動作を保証してはおりません。
+    3) EPSON独自定義の定数は"Epson.opos.tm.common.dll"に定義されています。EPSON
+       独自定義の定数を使用する場合は、インストールディレクトリにある、
+       "Epson.opos.tm.common.dll"への参照を追加してください。
+    4) ロゴユーティリティーについて
+       ロゴユーティリティは同梱されていません。不揮発性メモリへのイメージデータ
+       登録の際には、SetBitmapメソッドを使用していただくか、あるいは別途ロゴユー
+       ティリティを入手してください。
+    5) ログファイルの保存場所について
+       トレースの結果は以下のディレクトリに保存されます。
+        Windows XP/Embedded:
+         <System Drive>:\Documents and Settings\All Users\EPSON\pos\tm\Trace
+        Windows Vista以降:
+         <System Drive>:\ProgramData\EPSON\pos\tm\Trace
+
+6. パッケージの変更履歴
+   [バージョン1.12.25]
+      ・TM-T81II-42Cをサポートデバイスに追加しました。
+      ・TM-T81IIの自動用紙節約機能に対応しました。
+      ・外付けオプションブザーに対応しました。（TM-T81II）
+   [バージョン1.12.24]
+      ・USBがTM-U950のサポートインターフェースに追加されました。
+   [バージョン1.12.23]
+    (1)POSプリンタ
+      ・TM-T88VIをサポートデバイスに追加しました。
+      ・TM-T88VIとTM-m30で、複数インターフェースによる印刷機能を追加しました。
+      ・日本語機種でバックスラッシュを指定すると円記号が印字できるようになりました。
+      ・複数プリンタに同時印刷すると正しく印刷されない問題に対応しました。
+      ・ドライバの初期化時にバッテリーの状態変化が発生すると初期化に失敗する問題に対応しました。
+    (2)ラインディスプレイ
+      ・DM-D110で、パラレル接続とEthernet接続とBluetooth接続がサポートデバイスに追加されました。
+      ・DM-D210で、パラレル接続とEthernet接続とBluetooth接続がサポートデバイスに追加されました。
+      ・DM-D30で、シリアル接続とパラレル接続がサポートデバイスに追加されました。
+      ・スタンドアロン接続が、DM-D30に追加されました。
+   [バージョン1.12.22]
+    (1)共通
+      ・以下のOSサポートを追加：
+        Windows 10 (32bit)
+        Windows 10 (64bit)
+    (2)POSプリンタ
+      ・TM-m10をサポートデバイスに追加しました。
+      ・TM-m30をサポートデバイスに追加しました。
+     * 注意
+        TM-m10とTM-m30は、複数インターフェイスによる印刷をサポートしていません。
+    (3)ラインディスプレイ
+      ・DM-D30をサポートデバイスに追加しました。
+     * 注意
+        DM-D30は、スタンドアロン接続をサポートしていません。
+   [バージョン1.12.21]
+      ・TM-P80のオートカッター機能に対応しました。
+      ・TM-P80-42Cのオートカッター機能に対応しました。
+      ・TM-L90LinerFreeをサポートデバイスに追加しました。
+   [バージョン1.12.20]
+       - Bluetooth接続において、Claimに失敗することがある現象に対応しました。
+   [バージョン1.12.19]
+      ・TM-P20をサポートデバイスに追加しました。
+   [バージョン1.12.17]
+     (1)POSプリンター(POSPrinter)
+       - BluetoothとUSBとEthernetが、TM-T20IIのサポートインターフェースに
+         追加されました。
+       - BluetoothとUSBとEthernetが、TM-T20II-42Cのサポートインターフェースに
+         追加されました。
+       - Bluetoothが、TM-T88Vのサポートインターフェースに追加されました。
+       - Bluetoothが、TM-T70IIのサポートインターフェースに追加されました。
+     (2)電子ｼﾞｬｰﾅﾙ(ElectronicJournal)
+       - Wirelessが、TM-T20IIのサポートインターフェースに追加されました。
+       - Wirelessが、TM-T20II-42Cのサポートインターフェースに追加されました。
+     (3)ﾄﾞﾛﾜｰ(CashDrawer)
+       - Bluetoothが、CashDrawerのサポートインターフェースに追加されました。
+   [バージョン1.12.15]
+      ・以下のOSサポートを追加：
+        Windows Server 2012 R2 (64bit)
+        Windows 8.1 (32bit)
+        Windows 8.1 (64bit)
+      ・TM-T82の自動用紙節約機能に対応しました。
+      ・TM-T82-42Cの自動用紙節約機能に対応しました。
+      ・TM-T82にてParallelインタフェースをサポートしました。
+      ・TM-T82-42CにてParallelインタフェースをサポートしました。
+   [バージョン1.12.14]
+      ・TM-P80をサポートデバイスに追加しました。
+      ・TM-P80-42Cをサポートデバイスに追加しました。
+   [バージョン1.12.13]
+      ・TM-T20IIをサポートデバイスに追加しました。
+      ・TM-T20II-42Cをサポートデバイスに追加しました。      
+   [バージョン1.12.12]
+      ・TM-T90IIをサポートデバイスに追加しました。
+   [バージョン1.12.11]
+      ・TM-L90の自動用紙節約機能に対応しました。
+      ・TM-L90のバーコード印字機能でGS1, Composit, Datamatrix, Micro QRシンボルをサポートしました。
+   [バージョン1.12.9]
+      ・TM-T70IIをサポートデバイスに追加しました。
+   [バージョン1.12.8]
+      ・TM-P60IIPEELERをサポートデバイスに追加しました。
+    [Version 1.12.7]
+      ・以下のOSサポートを追加：
+        Windows Server 2012 (64bit)
+        Windows 8 (32bit)
+        Windows 8 (64bit)
+      ・TM-T82IIをサポートデバイスに追加しました。
+    [Version 1.12.3]
+      変更なし
+    [Version 1.12.2]
+      ・TM-T81II(簡体字中国語(GB18030)モデル)をサポートデバイスに追加しました。
+    [バージョン1.12]
+     (1)UPOS 1.12版に準拠し、以下の機能を追加しています。
+         POSプリンター(POSPrinter)：
+           - エスケープシーケンス機能の追加
+             取り消し線機能
+           - バーコード GS1の定数追加
+     (2)SetupPOS
+       - USBの設定方法を変更しました。
+       - デバイスの接続テストができるようになりました。
+     (3)POSプリンター(POSPrinter)
+       - DirectIO Eventで通知できるESC/POSコマンドのレスポンスの種類を追加しま
+         した。
+       - 不揮発性メモリ(NVRAM)に登録できるイメージ数の制限を外しました。
+         各POSPrinterのマニュアルの「SetBitmapメソッド」の章をを参照してくださ
+         い。
+
+      注意:上記変更は、下記のカテゴリーとデバイスが対象です。
+          カテゴリー：POSPrinter,MICR,CheckScanner,LineDisplay,CashDrawer,
+                      ElectricJournal
+          デバイス：TM-H6000II/III/IV,TM-T20,TM-T70,TM-T88III/IV/V,TM-T90,
+                    TM-L90,TM-U220
+   [バージョン1.11.21]
+    (1)POSプリンタ
+      ・TM-H6000IV(日本語モデル)をサポートデバイスに追加しました。
+    (2)電子ジャーナル
+      ・TM-H6000IV(日本語モデル)をサポートデバイスに追加しました。
+         ※電子ジャーナルのマニュアルにおいて、TM-H6000IIIをTM-H6000IVに読み替えて
+           ください。
+   [バージョン1.11.20]
+    (1)共通
+      ・以下のOSサポートを追加：
+        Windows Embedded POSReady 7 (32bit)
+        Windows Embedded POSReady 7 (64bit)
+    (2)POSプリンタ
+      ・TM-T88Vの自動用紙節約機能に対応しました。
+   [バージョン1.11.18]
+    (1)POSプリンタ
+      ・TM-T20(ANKモデル)にてEthernetインタフェースをサポートしました。
+      ・TM-T20-42C(ANKモデル)にてEthernetインタフェースをサポートしました。
+   [バージョン1.11.17]
+    (1)POSプリンタ
+      ・TM-T82(簡体字中国語(GB18030)モデル)において、Ethernetインターフェイスの
+        サポートを追加しました。
+      ・TM-T82/42C(簡体字中国語(GB18030)モデル)において、Ethernetインターフェイ
+        スのサポートを追加しました。
+   [バージョン1.11.16]
+    (1)共通
+      ・以下のOSサポートを追加：
+        Windows Server 2008 R2 SP1 (64bit)
+        Windows 7 SP1 (32bit)
+        Windows 7 SP1 (64bit)
+   [バージョン1.11.15]
+    (1)POSプリンタ
+      ・TM-T82(簡体字中国語(GB18030)モデル)をサポートデバイスに追加しました。
+      ・TM-T82/42C(簡体字中国語(GB18030)モデル)をサポートデバイスに追加しまし
+        た。
+   [バージョン1.11.14]
+    (1)共通
+      ・以下のOSサポートを追加：
+        Windows Embedded Standard 7 (32bit)
+        Windows Embedded Standard 7 (64bit)
+    (2)POSプリンタ
+      ・TM-H6000IV(ANKモデル)をサポートデバイスに追加しました。
+      ・TM-H2000をサポートデバイスに追加しました。
+      ・TM-T81(簡体字中国語(GB18030)モデル)をサポートデバイスに追加しました。
+      ・TM-T81(南アジアモデル)をサポートデバイスに追加しました。
+    (3)MICR（磁気インクリーダ）
+      ・TM-H6000IV(ANKモデル)をサポートデバイスに追加しました。
+      ・TM-H2000をサポートデバイスに追加しました。
+    (4)電子ジャーナル
+      ・TM-H6000IV(ANKモデル)をサポートデバイスに追加しました。
+   [バージョン1.11.13]
+    (1)POSプリンタ
+      ・TM-T20(日本語モデル)をサポートデバイスに追加しました。
+      ・TM-T20-42C(日本語モデル)をサポートデバイスに追加しました。
+      ・TM-T20(ANKモデル)にてSerialインタフェースをサポートしました。
+      ・TM-T20-42C(ANKモデル)にてSerialインタフェースをサポートしました。
+      ・TM-T88Vのパラレル接続をご使用の場合、ロール紙のニアエンド状態でも
+        デバイスを動作させることが可能になりました。
+    (2)電子ジャーナル
+      ・TM-T20(日本語モデル)をサポートデバイスに追加しました。
+      ・TM-T20-42C(日本語モデル)をサポートデバイスに追加しました。
+      ・TM-T20(ANKモデル)にてSerialインタフェースをサポートしました。
+      ・TM-T20-42C(ANKモデル)にてSerialインタフェースをサポートしました。
+   [バージョン1.11.12]
+    (1)POSプリンタ
+      ・TM-T88V(日本語モデル)をサポートデバイスに追加しました。
+      ・TM-T20をサポートデバイスに追加しました。
+      ・TM-T20-42Cをサポートデバイスに追加しました。
+      ・多階調印字機能に対応しました。（TM-T88Vのみ）
+      ・外付けオプションブザーに対応しました。（TM-T88Vのみ）
+    (2)電子ジャーナル
+      ・TM-T20をサポートデバイスに追加しました。
+      ・TM-T20-42Cをサポートデバイスに追加しました。
+   [バージョン1.11.11]
+    (1)共通
+      ・単体パッケージとの共存に対応
+      ・以下のOSサポートを追加：
+        Windows Server 2008 SP2、Windows Server 2008 R2、Windows Embedded 
+        Standard、Windows Embedded POSReady 2009、Windows 7
+    (2)POSプリンタ
+      ・TM-T88Vをサポートデバイスに追加しました。
+      ・デフォルト文字コードの変更を可能にしました。（TM-T88Vのみ）
+    (3)電子ジャーナル
+     ・TM-T88Vをサポートデバイスに追加しました。
+

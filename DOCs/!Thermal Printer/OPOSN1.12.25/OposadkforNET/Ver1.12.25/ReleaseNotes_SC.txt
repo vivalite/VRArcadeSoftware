@@ -1,0 +1,398 @@
+               EPSON OPOS ADK for .NET 1.12.25版本  发行说明
+                                                         精工爱普生公司
+ 
+                                                        2017年2月17日
+
+1. 概述
+    EPSON OPOS ADK for .NET 1.12.25版本已被发行。使用该发行，您可以开发与
+    Microsoft POS for .NET 1.12版本兼容的应用程序(与UnifiedPOS规格1.12版本
+    对应)。    
+    当开发应用程序时，请使用单独的开发环境诸如Microsoft Visual Studio .NET。
+
+    本发行说明包含多个软件包的相关信息。
+     - EPSON OPOS ADK for .NET 1.12.25 标准安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T88V安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T88VI安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T70II安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T20安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T81安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T82安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T81II安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T82II安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T90II安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-L90安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-T20II安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-P20安装
+     - EPSON OPOS ADK for .NET 1.12.25 仅限TM-P80安装
+
+2. 已确认的操作环境
+    EPSON OPOS ADK for .NET的操作在以下环境中已确认。
+  (1) OS (操作系统)
+    Windows Embedded for Point of Service (32位)
+    Windows XP Professional SP3 (32位)
+    Windows Vista SP2 (32位/64位)
+    Windows Server 2008 SP2 (32位/64位)
+    Windows Server 2008 R2 SP1 (64位)
+    Windows Server 2012 (64位)
+    Windows Server 2012 R2 (64位)
+    Windows 7 SP1 (32位/64位)
+    Windows 8 (32位/64位)
+    Windows 8.1 (32位/64位)
+    Windows 10 (32位/64位)
+    Windows Embedded Standard (32位)
+    Windows Embedded POSReady 2009 (32位)
+    Windows Embedded Standard 7 (32位/64位)
+    Windows Embedded POSReady 7 (32位/64位)
+  (2) .NET Framework
+    Microsoft .NET Framework 2.0
+    Microsoft .NET Framework 3.0
+    Microsoft .NET Framework 3.5
+  (3) 编程语言
+    Microsoft Visual C# .NET
+    Microsoft Visual Basic .NET
+  (4) POS for .NET
+    Microsoft POS for .NET 1.12
+
+3. 安装与卸载
+    请注意由于受到EPSON OPOS for .NET ADK安装程序上的InstallShield 12的限制，
+    初始化和清除过程可能会减速。
+    请遵照“EPSON OPOS ADK for .NET安装指南”中的步骤进行安装与卸载。
+
+
+4. OPOS.NET 1.12.2 安装
+4.1 所支持的设备与已确认的固件版本
+    有关详情请参考“SupportedDevicesList.txt”。
+
+4.2. 特别说明
+4.2.1 示例程序
+      - 当您使用该示例程序时，登录ID需要的是管理员帐户组。
+      - 使用逻辑设备名称注册。
+          POSPrinter        : POSPrinter
+          LineDisplay       : LineDisplay
+          MICR              : MICR
+          CheckScanner      : CheckScanner
+          CashDrawer        : CashDrawer
+          Scanner           : Scanner
+          MSR               : MSR
+          Keylock           : Keylock
+          ElectronicJournal : ElectronicJournal
+      - 该示例程序显示一个（多个）控制方法的示例。
+        因此，不保证所有设备的所有设置均能正确操作。
+
+4.2.2 Windows 8翱构糠惹塑
+      - Windows 8.0翱构糠惹塑中标准安装了.net Framework4.5，但POS for .net只支持到
+        .net Framework3.5为止。
+      - 在Windows 8.0翱构糠惹塑中使用.net Framework3.5的办法，请参照以下网址。
+        http://msdn.microsoft.com/zh-cn/library/vstudio/hh506443.aspx
+
+4.2.3 安装与卸载
+      - 当安装该软件时，请在以下目录中创建一个名为“EPSON”的目录。
+         
+      Windows XP/Embedded:
+       <System Drive>:\Documents and Settings\All Users\
+      Windows Vista翱构糠惹塑:
+       <System Drive>:\ProgramData\
+
+      ServiceObject操作所要求的临时文件与信息文件保存在该“EPSON”目录中。不要
+      删除该目录。
+
+     - 在本产品的以前版本（1.11.20版本-1.12版本）上进行无提示覆盖安装时，
+       请重新启动系统。
+
+4.2.4 当使用EPSON原始常量时
+      - 在“Epson.opos.tm.common.dll”中定义EPSON原始常量。
+        当使用EPSON原始常量时，添加一个参照到安装目录上的
+       “Epson.opos.tm.common.dll”中。
+
+4.2.5 跟踪功能
+      当使用跟踪（日志）功能时
+      - 跟踪结果保存在以下目录中。
+
+      Windows XP/Embedded:
+       <System Drive>:\Documents and Settings\All Users\EPSON\pos\tm\Trace
+      Windows Vista翱构糠惹塑:
+       <System Drive>:\ProgramData\EPSON\pos\tm\Trace
+
+4.2.6 串行接口
+      - 通常COM端口的COM1到COM9都可以使用。要使用COM端口的COM10及以上端口，
+        必须添加“\\.\”到已注册于SetupPOS的端口名称的开头。
+        例如，使用COM10端口时，注册“\\.\COM10”。
+
+4.2.7 并行接口
+      - 关闭设备电源之后，在ServiceObject意识到电源已关闭之前会有数秒钟的延迟。
+      - ECP模式不支持设置于BIOS上的并行模式。
+        同时也不推荐EPP模式。
+
+4.2.8 USB接口
+       - 如果以下设备在SetupPOS注册中注册，则在“4.2.8.1 步骤”中配置设置。
+         TM-H5000II/TM-H5200/TM-J2000/TM-J2100/TM-J7000/TM-J7100/TM-J7500/
+         TM-J7600/TM-U230/TM-U675
+4.2.8.1 步骤
+      1) 设置USB端口设置[端口名称类型]到[端口名称]。
+      2) 指定USB序列号作为端口名称。
+      
+      USB序列号是为USB独占提供的序列号。
+      USB序列号可以用以下步骤检查。
+
+      - 执行打印机自检打印。
+        通常，如果在打印机盖板关闭的状态下按下进纸开关同时打开打印机电源，自检
+
+        打印则在卷纸上执行。
+      - 从打印结果中识别序列号。
+        当打印结果为a)格式时，显示的“ID”部分为USB序列号（以下示例中
+        YYYYYYYYYYYYYY即为序列号）。当打印结果为b)格式时，USB序列号与打印机序列
+        号相同。在这种情况下，检查打印机上所附的标签。
+
+        a) 当打印USB序列号时
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          Interface UB-UXXXX Ver.X.XX
+           ID  :YYYYYYYYYYYYYY
+              :
+              :
+          ----------
+
+        b) 当不打印USB序列号时
+          ----------
+              :
+          Firmware Version X.XX ESC/POS
+
+          USB Interface or other
+              :
+              :
+          ----------
+
+          * 上述所示“USB Interface or other”可能简单地打印为
+           “USB Interface”。
+
+    注意当使用此方法设置设备时，如果您使用不同的USB序列号更改设备，必须更改
+    SetupPOS的设置。
+
+    如果当打开/关闭打印机时，显示“找到新的硬件向导”，则取消该向导并安装EPSON
+    高级打印机驱动程序（4.50或更高版本）。
+
+4.2.9 POSPrinter
+       - 尽管可以通过将DirectIO方法的命令参数指定为OUTPUT_NORMAL或
+         OUTPUT_REALTIME来直接发送命令到打印机，但不要发送影响打印机设置的命
+         令。
+       - 请勿在强光处使用分离发行模式下的TM-L90 Peeler。
+       - 当在PageMode下使用RightToLeft与LeftToRight方向时，已选择的位图在以下
+         条件下将不被打印：
+           - 打印站为收据
+           - 该位图是由SetBitmap注册的第二个（或更高）的位图
+           - 当执行SetBitmap时，RecLetterQuality被设置为FALSE
+         上述条件适用于以下设备：
+           - TM-T88III
+           - TM-T88IIIX
+           - TM-H5000II
+           - TM-H5200
+         为了解决该问题，当执行SetBitmap时，将RecLetterQuality设置为TRUE。
+       - 多色阶打印：
+         由于多色阶打印要使用更多的打印数据，通过串行或Ethernet接口打印可能
+         会变得不稳定，且打印结果会出现白色条纹。
+
+4.2.10 LineDisplay
+       - 在DM-D30中，当MarqueeRepeatWait或MarqueeUnitWait的设置低于300毫秒时，
+         将按300毫秒动作。
+
+4.2.11 打印机电源打开时的状态送信
+       - 在已经使用OPOS.NET后，当打开打印机电源时，一些打印机被设置传送打印机
+         状态的三个字节到主机。使用该状态以便在打印机电源打开时OPOS.NET可以
+         识别。
+
+4.2.12 徽标实用程序（TMFlogo等）
+       - 徽标实用程序不在该软件包中。为上载徽标数据到永久性内存，
+         请使用SetBitmap方法，或获取该徽标实用程序。
+
+4.2.13 其他特别说明
+       - 当关闭/打开设备电源时，在关闭设备后经常要等待至少5秒钟后再打开设备。
+       - 当以Ethernet接口使用非交换集线器时: 高流量可能引起许多数据包被丢弃并且
+         打印机显示为脱机。
+       - 以下的配置是已知的限制:
+       - 操作系统的默认来宾帐户和Ethernet接口。
+         注意:
+           一个已知的替代方法将不使用“默认”来宾帐户，但会创建并使用其他的来宾
+            帐户。
+
+       - 当打印机处于使用状态时，如果计算机进入待机/休眠模式，驱动程序可能变得
+         不稳定，所以不支持待机/休眠模式。
+
+4.2.14 蓝牙接口
+    1) 在关闭打印机电源后20秒以内，即便重新打开电源也不能打印
+
+4.3 修订历史记录
+    [1.12.25版本]
+       - 已添加支持TM-T81II-42C。
+       - 可以提供TM-T81II的自动纸张节约功能了。
+       - 已添加可选的外部蜂鸣器。（仅限TM-T81II）
+    [1.12.24版本]
+       - TM-U950所支持的接口中追加了USB。
+    [1.12.23版本]
+       - 已添加支持TM-T88VI。
+       - TM-T88VI和TM-m30的支持复数接口的打印。
+       - DM-D110的支持端口中追加了以太网、蓝牙、并行。
+       - DM-D210的支持端口中追加了以太网、蓝牙、并行。
+       - DM-D30的支持端口中追加了以串行、并行。
+       - DM-D30支持独立连接。
+       - 在日语机上指定反斜线可打印日日元符号。
+       - 复数打印机同时打印时不能正确打印的问题已对应。
+       - 驱动初始化时电池的状态发生改变导致初始化失败的问题已对应。
+    [1.12.22版本]
+       - TM-m10的支持端口中追加了以太网。
+       - TM-m30的支持端口中追加了以太网。
+       - TM-D30的支持端口中追加了以太网。
+       - 已添加支持，Windows 10 (32位)，与Windows 10 (64位)。
+
+      * 注意
+         TM-m10和TM-m30不支持使用多个接口的打印。
+         DM-D30不支持独立连接。
+    [1.12.21版本]
+       - TM-P80自动切纸型号
+       - TM-P80-42C自动切纸型号
+       - TM-L90LinerFree的支持端口中追加了以太网。
+    [1.12.20版本]
+       问题修改
+    [1.12.19版本]
+       - TM-P20的支持端口中追加了以太网。
+    [1.12.17版本]
+      (1)POSPrinter
+       - TM-T20II所支持的接口中追加了蓝牙。
+       - TM-T20II-42C所支持的接口中追加了蓝牙。
+       - TM-T88V所支持的接口中追加了蓝牙。
+       - TM-T70II所支持的接口中追加了蓝牙。
+      (2)CashDrawer
+       - CashDrawer所支持的接口中追加了蓝牙。
+    [1.12.15版本]
+       - 已添加支持，Windows Server 2012 R2 (64位)，Windows 8.1 (32位)，
+         与Windows 8.1 (64位)。
+       - 可以提供TM-T82的自动纸张节约功能了。
+       - 可以提供TM-T82-42C的自动纸张节约功能了。
+       - TM-T82的支持端口中追加了并行。
+       - TM-T82-42C的支持端口中追加了并行。
+    [1.12.14版本]
+       - TM-P80的支持端口中追加了以太网。
+       - TM-P80-42C的支持端口中追加了以太网。
+    [1.12.13版本]
+       - TM-T20II的支持端口中追加了以太网。
+       - TM-T20II-42C的支持端口中追加了以太网。
+    [1.12.12版本]
+       - TM-T90II的支持端口中追加了以太网。
+    [1.12.11版本]
+       - TM-L90繁体中文型(GB18030)号已被添加为被支持的设备。
+       - 可以提供TM-L90的自动纸张节约功能了。
+       - 追加条码GS1, Composit, Datamatrix, Micro QR符号。(仅TM-L90)
+    [1.12.9版本]
+        - TM-T70II的支持端口中追加了以太网。
+    [1.12.8版本]
+        - TM-P60IIPEELER的支持端口中追加了以太网。
+    [1.12.7版本]
+       - 已添加支持，Windows Server 2012 (64位)，Windows 8 (32位)，
+         与Windows 8 (64位)。
+         - TM-T82II的支持端口中追加了以太网。
+         - TM-T82II-42C的支持端口中追加了以太网。
+    [1.12.3版本]
+      没有变化
+    [1.12.2版本]
+     (1)POSPrinter
+       - TM-T81II的支持端口中追加了以太网。
+    [1.12版本]
+      (1)基于UPOS V1.12版本的新功能如下所示
+         POSPrinter：
+            - 追加ESC指令功能
+             删除线功能
+            - 追加条码GS1常数符号
+      (2)SetupPOS
+        - 改变USB接口的设置方法。
+        - 该设备可以测试SetupPOS。
+      (3)POS打印机（POSPrinter）
+        - 追加了可通过DirectIOEvent通知ESC / POS命令的响应类型。
+        - 取消了在非易失性内存（NVRAM）上注册图像数量的限制。
+
+      特别说明:上述变化是以下类别和设备。
+          类别：POSPrinter,MICR,CheckScanner,LineDisplay,CashDrawer
+          设备：TM-H6000II/III/IV,TM-T20,TM-T70,TM-T88III/IV/V,
+                TM-T90,TM-L90,TM-U220
+    [1.11.20版本]
+     (1) 通用
+       - 已添加支持Windows Embedded POSReady 7 (32位)。
+       - 已添加支持Windows Embedded POSReady 7 (64位)。
+     (2) POSPrinter
+       - 可以提供TM-T88V的自动纸张节约功能了。
+    [1.11.18版本]
+     (1) POSPrinter
+        - TM-T20的支持端口中追加了以太网。
+        - TM-T20-42C的支持端口中追加了以太网。
+     (2) ElectronicJournal
+        - TM-T20的支持端口中追加了以太网。
+        - TM-T20-42C的支持端口中追加了以太网。
+    [1.11.17版本]
+     (1) POSPrinter
+       OPOS.NET 1.11.17 仅限TM-T82安装:
+        - 支持TM-T82型号南亚字符。
+        - 支持TM-T82-42C型号南亚字符。
+        - TM-T82的支持端口中追加了以太网。
+        - TM-T82-42C的支持端口中追加了以太网。
+    [1.11.16版本]
+     (1) 通用
+       - 已添加支持，Windows Server 2008 R2 SP1 (64位)，Windows 7 SP1 (32位)，
+         与Windows 7 SP1 (64位)。
+     (2) POSPrinter
+       - TM-H6000IV多国语字符型号已被添加为被支持的设备。
+    [1.11.15版本]
+     (1) POSPrinter
+       - 已添加支持TM-T82。
+       - 已添加支持TM-T82-42C。
+    [1.11.14版本]
+     (1) 通用
+       - 已添加支持Windows Embedded Standard 7 (32位)。
+       - 已添加支持Windows Embedded Standard 7 (64位)。
+     (2) POSPrinter
+       - 已添加支持TM-T81。
+       - 已添加支持TM-H6000IV。
+       - 已添加支持TM-H2000。
+     (3) MICR
+       - 已添加支持TM-H6000IV。
+       - 已添加支持 TM-H2000。
+     (4) ElectronicJournal
+       - 已添加支持TM-H6000IV。
+    [1.11.13版本]
+     (1) 通用
+       - 已添加支持64位操作系统上的32位应用程序。
+     (2) POSPrinter
+       - 已添加支持TM-T20(日语模式)。
+       - 已添加支持TM-T20-42C(日语模式)。
+       - 已添加支持以串行连接的TM-T20。
+       - 已添加支持以串行连接的TM-T20-42C。
+       - 当以并行连接使用TM-T88V时，即使在纸张处于即将用完的状态下设备仍能够
+         操作。
+     (3) ElectronicJournal
+       - 已添加支持TM-T20(日语模式)。
+       - 已添加支持TM-T20-42C(日语模式)。
+       - 已添加支持以串行连接的TM-T20。
+       - 已添加支持以串行连接的TM-T20-42C。
+    [1.11.12版本]
+     (1) POSPrinter
+       - 已添加支持TM-T88V(日语模式)。
+       - 已添加支持TM-T20。
+       - 已添加支持TM-T20-42C。
+       - 已添加多色阶打印功能。（仅限TM-T88V）
+       - 已添加可选的外部蜂鸣器。（仅限TM-T88V）
+       - 已添加一项设置以允许更改默认字符设置。(TM-T20)
+       - 添加支持字符串打印的Unicode。(TM-T20)
+     (2) ElectronicJournal
+       - 已添加支持TM-T20。
+       - 已添加支持TM-T20-42C。
+    [1.11.11版本]
+     (1) 通用
+       - 已添加支持单位软件包。
+       - 已添加支持Windows Server 2008 SP2，Windows Server 2008 R2，
+         Windows Embedded Standard，Windows Embedded POSReady 2009，
+         与Windows 7。
+     (2) POSPrinter
+       - 已添加支持TM-T88V。
+       - 已添加一项设置以允许更改默认字符设置。（仅限TM-T88V）
+       - 添加支持字符串打印的Unicode。(仅限TM-T88V)
+     (3) ElectronicJournal
+       - 已添加支持TM-T88V。

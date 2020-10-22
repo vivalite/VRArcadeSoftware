@@ -1,0 +1,5 @@
+If you need thermal printer function please install thermal printer drive first. (I use Epson TM-T20II mPOS Thermal Receipt Printer)
+
+After installing the thermal printer please install POS for .Net v1.12 as this is bridge between .NET program and the printer drive.
+
+You will also need to config the default thermal printer instance on dev and target machine, check printer's user manual for detailed steps.

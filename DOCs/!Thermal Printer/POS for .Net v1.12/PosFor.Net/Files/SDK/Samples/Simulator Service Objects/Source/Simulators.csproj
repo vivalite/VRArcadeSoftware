@@ -1,0 +1,177 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{445962AF-699E-4F35-A8EB-0D445C5F5F12}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Microsoft.PointOfService.DeviceSimulators</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.PointOfService">
+      <Name>Microsoft.PointOfService</Name>
+      <HintPath>..\..\..\Microsoft.PointOfService.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PointOfService.ControlBase">
+      <Name>Microsoft.PointOfService.ControlBase</Name>
+      <HintPath>..\..\..\Microsoft.PointOfService.ControlBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CashDrawer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckScanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keylock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsrDataParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PinPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulatorBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="CashDrawer.resx">
+      <DependentUpon>CashDrawer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckScanner.resx">
+      <DependentUpon>CheckScanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keylock.resx">
+      <DependentUpon>Keylock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineDisplay.resx">
+      <DependentUpon>LineDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSR.resx">
+      <DependentUpon>MSR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PinPad.resx">
+      <DependentUpon>PinPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosKeyboard.resx">
+      <DependentUpon>PosKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSPrinter.resx">
+      <DependentUpon>POSPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner.resx">
+      <DependentUpon>Scanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulatorBase.resx">
+      <DependentUpon>SimulatorBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
