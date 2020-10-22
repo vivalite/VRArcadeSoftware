@@ -48,9 +48,6 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\!CommonDLLs\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="IntelliLock.Licensing">
-      <HintPath>C:\Program Files (x86)\Eziriz\IntelliLock\SDK\Bin\IntelliLock.Licensing.dll</HintPath>
-    </Reference>
     <Reference Include="InTheHand.Net.Personal">
       <HintPath>..\..\!CommonDLLs\InTheHand.Net.Personal.dll</HintPath>
     </Reference>
@@ -152,12 +149,6 @@
     <Compile Include="GamePlayHistory.Designer.cs">
       <DependentUpon>GamePlayHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="HardwareCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HardwareCode.Designer.cs">
-      <DependentUpon>HardwareCode.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GamePlayHistory.resx">
       <DependentUpon>GamePlayHistory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HardwareCode.resx">
-      <DependentUpon>HardwareCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

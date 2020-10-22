@@ -1,4 +1,3 @@
-using IntelliLock.Licensing;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -226,41 +225,41 @@ namespace ManagingSystem
         }
 
 
-        public static bool IsValidLicenseAvailable()
-        {
-            bool isValidLicense = false;
-            try
-            {
-                isValidLicense = (EvaluationMonitor.CurrentLicense.LicenseStatus == IntelliLock.Licensing.LicenseStatus.Licensed);
-            }
-            finally
-            {
+        //public static bool IsValidLicenseAvailable()
+        //{
+        //    bool isValidLicense = false;
+        //    try
+        //    {
+        //        isValidLicense = (EvaluationMonitor.CurrentLicense.LicenseStatus == IntelliLock.Licensing.LicenseStatus.Licensed);
+        //    }
+        //    finally
+        //    {
 
-            }
-            // disable license protection
-            return true;
-        }
+        //    }
+        //    // disable license protection
+        //    return true;
+        //}
 
-        public static string GetHardwareID()
-        {
-            return HardwareID.GetHardwareID(true, false, true, true, false, false);
-        }
+        //public static string GetHardwareID()
+        //{
+        //    return HardwareID.GetHardwareID(true, false, true, true, false, false);
+        //}
 
-        public static string GetLicenseExpirationDate()
-        {
-            string licenseExpDate = "No Valid License File Found!";
+        //public static string GetLicenseExpirationDate()
+        //{
+        //    string licenseExpDate = "No Valid License File Found!";
 
-            try
-            {
-                licenseExpDate = EvaluationMonitor.CurrentLicense.ExpirationDate.ToString("d");
-            }
-            finally
-            {
+        //    try
+        //    {
+        //        licenseExpDate = EvaluationMonitor.CurrentLicense.ExpirationDate.ToString("d");
+        //    }
+        //    finally
+        //    {
 
-            }
+        //    }
 
-            return licenseExpDate;
-        }
+        //    return licenseExpDate;
+        //}
 
         public static T Clone<T>(this T source)
         {

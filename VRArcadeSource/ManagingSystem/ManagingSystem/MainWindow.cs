@@ -64,10 +64,10 @@ namespace ManagingSystem
             radCardViewMain.DataSource = _dtClientList;
             radCardViewMain.CardViewElement.CardTemplate.LoadLayout(Path.GetTempPath() + "VRZMgLayout.xml");
 
-            if (Utility.IsValidLicenseAvailable())
-            {
-                //this.Text += " (Licensed Version. Will Expire On " + Utility.GetLicenseExpirationDate() + " )";
-            }
+            //if (Utility.IsValidLicenseAvailable())
+            //{
+            //    //this.Text += " (Licensed Version. Will Expire On " + Utility.GetLicenseExpirationDate() + " )";
+            //}
 
             //_timerFlip = new System.Threading.Timer((e) =>
             //{
